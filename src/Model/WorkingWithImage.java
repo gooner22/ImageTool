@@ -9,7 +9,8 @@ import org.im4java.process.ProcessStarter;
 
 public class WorkingWithImage {
 
-	private ImageParameterFetch imageParameters;
+    public static final String THUMBNAILS_FOLDER = "thumbnails" + File.separator;
+    private ImageParameterFetch imageParameters;
 	private String pathToFolder;
 	private String pathToIMLibrary;
 	private String pathToEditedFolder;
@@ -456,20 +457,22 @@ public class WorkingWithImage {
 					if (checkForFolder()) {
 						if (cmdForThumbnail != null && opForThumbnail != null) {
 							if (imageParameters.getNewName().equals("")) {
+                                // thumbnails should be in separate folder
 								opForThumbnail.addImage(pathToEditedFolder
-										+ '/' + nameOfImage + "th" + "."
-										+ format);
+                                        + File.separator + THUMBNAILS_FOLDER + nameOfImage + "th" + "."
+                                        + format);
 							} else {
 								// check for iterator value and change zeroes
 
 								opForThumbnail.addImage(pathToEditedFolder
-										+ '/' + imageParameters.getNewName()
+										+ File.separator + THUMBNAILS_FOLDER + imageParameters.getNewName()
 										+ "_th_" + zeroesBefore + iterator + "."
 										+ format);
 							}
 						}
 					} else {
-						return false;
+                        System.out.println("path to output folder doesn't exist");
+                        return false;
 					}
 
 					try {
@@ -494,10 +497,10 @@ public class WorkingWithImage {
 
 				if (checkForFolder()) {
 					if (imageParameters.getNewName().equals("")) {
-						op.addImage(pathToEditedFolder + '/' + nameOfImage
+						op.addImage(pathToEditedFolder + File.separator + nameOfImage
 								+ "." + format);
 					} else {
-						op.addImage(pathToEditedFolder + '/'
+						op.addImage(pathToEditedFolder + File.separator
 								+ imageParameters.getNewName() + zeroesBefore
 								+ iterator + "." + format);
 					}
@@ -576,18 +579,32 @@ public class WorkingWithImage {
 	private void createDirectory() {
 
 		for (int i = 0;; i++) {
-			boolean successForNonDefaultDir = new File(directory.getPath()
-					+ "/Edited Images-" + i).mkdir();
+            final File outputDir = new File(directory.getPath()
+                    + "/Edited Images-" + i);
+            boolean successForNonDefaultDir = outputDir.mkdir();
 			if (successForNonDefaultDir) {
 				// set path to folder with edited images
-				pathToEditedFolder = (directory.getPath() + "/Edited Images-" + i);
+                pathToEditedFolder = outputDir.getAbsolutePath();
 				System.out.println("Create folder: " + pathToEditedFolder);
+                // create thumbnails folder
+                createThumbnailsDirectory(outputDir);
 				return;
-			}
+			}else {
+                System.out.println("Couldn't create output folder: " + outputDir.getAbsolutePath());
+            }
 		}
 	}
 
-	public boolean checkForFolder() {
+    private void createThumbnailsDirectory(File outputDir) {
+        final File thumbnailsFile = new File(outputDir.getAbsolutePath() + File.separator + THUMBNAILS_FOLDER);
+        if(thumbnailsFile.mkdir()){
+            System.out.println("Create folder: " + thumbnailsFile.getAbsolutePath());
+        }else {
+            System.out.println("Couldn't create folder for thumbnails: " + thumbnailsFile.getAbsolutePath());
+        }
+    }
+
+    public boolean checkForFolder() {
 		if (new File(pathToEditedFolder).exists()) {
 			System.out.println("TRUE checkForFolder");
 			return true;

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="ImageToolAddOns">
+    <output-path>$PROJECT_DIR$/out/artifacts/ImageToolAddOns</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/resources" />
+      <element id="dir-copy" path="$PROJECT_DIR$/ImageToolAddOns" />
+    </root>
+  </artifact>
+</component>

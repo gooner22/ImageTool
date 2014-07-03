@@ -1,20 +1,12 @@
 package Model;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.swing.plaf.metal.MetalIconFactory.FolderIcon16;
-
 import DTO.ImageParametrs;
 import DataStrategy.StringXml;
 import Error.NotExistingXMLError;
+
+import java.io.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Singletone model to handle all work with data
@@ -110,7 +102,7 @@ public enum Model {
 		// TODO Auto-generated method stub
 		if (!pathToFolderWorkingWith.equals("")) {
 			
-			String path = pathToFolderWorkingWith + "\\" + "imageSettings.xml";
+			String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
 			File f = new File(path);
 			if (f.exists()) {
 				System.out.println("delete file");
@@ -150,7 +142,7 @@ public enum Model {
 	 * @return true if exists false if not
 	 */
 	public boolean isExistsXML() {
-		String path = pathToFolderWorkingWith + "\\" + "imageSettings.xml";
+		String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
 
 		if (new File(path).exists()) {
 			return true;
@@ -181,7 +173,7 @@ public enum Model {
 	 */
 	public File getXmlFile() throws NotExistingXMLError {
 		if (isExistsXML()) {
-			String path = pathToFolderWorkingWith + "\\" + "imageSettings.xml";
+			String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
 			return new File(path);
 		} else
 			throw new NotExistingXMLError();
