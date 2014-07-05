@@ -7,5 +7,6 @@ package com.kma.ImageTool.DataStrategy;
 public class XmlKeys {
 
     public static final String RENAME_IMAGE_FORMAT = "RENAME_IMAGE_FORMAT";
+    public static final String RENAME_IMAGE_TH_FORMAT = "RENAME_IMAGE_TH_FORMAT";
     public static final String RENAME_IMAGE = "RENAME_IMAGE";
 }

@@ -33,6 +33,7 @@ public class ParseXML {
 
 				private boolean shouldRename = false;
 				private boolean renameFormat = false;
+				private boolean renameFormatTh = false;
 				private boolean changeResolution = false;
 				private boolean changeFormat = false;
 				private boolean changeSize = false;
@@ -76,6 +77,10 @@ public class ParseXML {
                     if (qName.equalsIgnoreCase(XmlKeys.RENAME_IMAGE)) {
                         shouldRename = true;
                     }
+                    if (qName.equalsIgnoreCase(XmlKeys.RENAME_IMAGE_TH_FORMAT)) {
+                        renameFormatTh = true;
+                    }
+
 
 					if (qName.equalsIgnoreCase("CHANGE_RESOLUTION_TO")) {
 						changeResolution = true;
@@ -355,16 +360,6 @@ public class ParseXML {
 
 				public void characters(char ch[], int start, int length)
 						throws SAXException {
-
-                    // TODO: implement rename logics
-//					if (renameFor) {
-//						String newName = new String(ch, start, length);
-//						if (checkForCharInString(newName, length)) {
-//							imageWorkingWith.setNewName(newName);
-//
-//						}
-//						renameFor = false;
-//					}
 
 					if (parameterForChangeSizeOfHeightIfLess) {
 						String parameter = new String(ch, start, length);
@@ -1239,6 +1234,14 @@ public class ParseXML {
                         String str = new String(ch, start, length);
                         if (checkForCharInString(str, length)) {
                             imageWorkingWith.setRenamingFormat(str);
+                        }
+                    }
+
+                    if (renameFormatTh){
+                        renameFormatTh = false;
+                        String str = new String(ch, start, length);
+                        if (checkForCharInString(str, length)) {
+                            imageWorkingWith.setRenamingFormatThumbnail(str);
                         }
                     }
 			

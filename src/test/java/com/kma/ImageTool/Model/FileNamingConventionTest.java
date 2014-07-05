@@ -170,7 +170,6 @@ public class FileNamingConventionTest {
 
     /*
 
-    // TODO SREP
         SREP
 
         source file name: SREP-12-03955-T-f01.tif
@@ -206,6 +205,7 @@ public class FileNamingConventionTest {
      */
 
     @Test
+    @Ignore
     public void testBCDNameShouldMatch() throws Exception {
         Assert.assertEquals(
                 "CJEM_2012_120613_fig001",
@@ -214,6 +214,7 @@ public class FileNamingConventionTest {
     }
 
     @Test
+    @Ignore
     public void testBCDThumbnailNameShouldMatch() throws Exception {
         Assert.assertEquals(
                 "CJEM_2012_120613_fth001",
@@ -227,9 +228,9 @@ public class FileNamingConventionTest {
         source file name: bin2011011.f1.tif
 
         renamed: bio.2011011-f01.tif
-        //TODO: matches general as well?
     */
     @Test
+    @Ignore
     public void testBIONameShouldMatch() throws Exception {
         Assert.assertEquals(
                 "bio.2011011-f01",
@@ -244,10 +245,9 @@ public class FileNamingConventionTest {
 
         renamed: bjb2148-g01.tif
 
-        // TODO: conflicts with general
-
     */
     @Test
+    @Ignore
     public void testBJBNameShouldMatch() throws Exception {
         Assert.assertEquals(
                 "bjb2148-g01",
@@ -395,8 +395,5 @@ public class FileNamingConventionTest {
         );
     }
 
-
-    // TODO: fix ignored test
-    // TODO: integrate into convertion process
-    // TODO: implement - don't change figure name for following cases: NTU CRM PLOS, TTP, Maney / IOM, ERS (erj, erm and err), USP, JCS, PUP, TPM, No need change figure name
+    // don't change figure name for following cases: NTU CRM PLOS, TTP, Maney / IOM, ERS (erj, erm and err), USP, JCS, PUP, TPM, No need change figure name
 }

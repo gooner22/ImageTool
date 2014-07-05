@@ -112,22 +112,47 @@ public class WorkingWithImage {
 						formatOfImage = "jpg";
 					}
 
-					if (imageParameters.getNewName().equals("")) {
-						String original = imagePath.substring(directory
-								.getAbsolutePath().length() + 1, imagePath
-								.length());
-                        original = original.substring(0,
-                                original.indexOf(formatOfImage) - 1);
-						System.out.println("Original image: " + original);
+                    // getting original image name
+                    String original = imagePath.substring(directory
+                            .getAbsolutePath().length() + 1, imagePath
+                            .length());
+                    original = original.substring(0,
+                            original.indexOf(formatOfImage) - 1);
+                    System.out.println("Original image: " + original);
 
-                        nameOfImage = FileNamingConvention.getOutputFileName(original);
-						System.out.println("Name of image: " + nameOfImage);
+					if (imageParameters.shouldRenameFile()) {
+                        if (imageParameters.getRenamingFormat() == null ||
+                                imageParameters.getRenamingFormatThumbnail() == null)
+                            throw new IllegalArgumentException("renaming format is not set");
 
-                        nameOfThumbnailImage = FileNamingConvention.getOutputThumbnailFileName(original);
-                        System.out.println("Name of th image: " + nameOfImage);
-					}
+                        if (imageParameters.getRenamingFormat().isEmpty()){
+                            // use built-in regex definition and predefined rules to rename files
+                            nameOfImage = FileNamingConvention.getOutputFileName(original);
+                        } else{
+                            // use provided pattern
+                            // TODO mhontar: get number of item
+                            int numberOfResource = 1;
+                            nameOfImage = String.format(imageParameters.getRenamingFormat(), numberOfResource > 0 ? numberOfResource : iterator);
+                        }
+                        if (imageParameters.getRenamingFormatThumbnail().isEmpty()){
+                            // use built-in regex definition and predefined rules to rename files
+                            nameOfThumbnailImage = FileNamingConvention.getOutputThumbnailFileName(original);
+                        } else{
+                            // use provided pattern
+                            // TODO mhontar: get number of item
+                            int numberOfResource = 1;
+                            nameOfThumbnailImage = String.format(imageParameters.getRenamingFormatThumbnail(), numberOfResource > 0 ? numberOfResource : iterator);
+                        }
+                    }else {
+                        nameOfImage = original;
+                        nameOfThumbnailImage = original + "th";
+                    }
+                    // TODO mhontar: check regex renaming
+                    System.out.println("Name of image: " + nameOfImage);
+                    System.out.println("Name of th image: " + nameOfThumbnailImage);
 
-					if (format.equals("none")) {
+
+                    if (format.equals("none")) {
 						format = formatOfImage;
 					}
 
@@ -465,20 +490,15 @@ public class WorkingWithImage {
 
 					if (checkForFolder()) {
 						if (cmdForThumbnail != null && opForThumbnail != null) {
-							if (imageParameters.getNewName().equals("")) {
-                                // thumbnails should be in separate folder
-								opForThumbnail.addImage(pathToEditedFolder
-                                        + File.separator + THUMBNAILS_FOLDER + nameOfThumbnailImage + "."
-                                        + format);
-							} else {
-								// check for iterator value and change zeroes
+                            if (nameOfThumbnailImage.isEmpty())
+                                throw new IllegalArgumentException("nameOfThumbnailImage can't ne null!");
 
-								opForThumbnail.addImage(pathToEditedFolder
-										+ File.separator + THUMBNAILS_FOLDER + imageParameters.getNewName()
-										+ "_th_" + zeroesBefore + iterator + "."
-										+ format);
-							}
-						}
+                            // thumbnails should be in separate folder
+                            opForThumbnail.addImage(pathToEditedFolder
+                                    + File.separator + THUMBNAILS_FOLDER + nameOfThumbnailImage + "."
+                                    + format);
+
+                        }
 					} else {
                         System.out.println("path to output folder doesn't exist");
                         return false;
@@ -505,14 +525,12 @@ public class WorkingWithImage {
 				}
 
 				if (checkForFolder()) {
-					if (imageParameters.getNewName().equals("")) {
-						op.addImage(pathToEditedFolder + File.separator + nameOfImage
-								+ "." + format);
-					} else {
-						op.addImage(pathToEditedFolder + File.separator
-								+ imageParameters.getNewName() + zeroesBefore
-								+ iterator + "." + format);
-					}
+                    if (nameOfImage.isEmpty()) {
+                        throw new IllegalArgumentException("nameOfImage can't ne null!");
+                    }
+                    op.addImage(pathToEditedFolder + File.separator + nameOfImage
+                            + "." + format);
+
 				} else {
 
 					return false;

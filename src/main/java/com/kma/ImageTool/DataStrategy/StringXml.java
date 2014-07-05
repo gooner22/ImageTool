@@ -4,6 +4,7 @@ import com.kma.ImageTool.DTO.ImageParametrs;
 
 import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE;
 import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE_FORMAT;
+import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE_TH_FORMAT;
 
 public class StringXml {
 
@@ -18,7 +19,10 @@ public class StringXml {
 	private final String CLOSE_RENAME_IMAGE_FORMAT = "</" + RENAME_IMAGE_FORMAT + "><!-- If this field is not empty then image will be renamed using this format. When empty - built-in intelligent rules will be used.\n" +
             "RESTRICTION: You should not write an extension of the file, only NAME required without quotes;\n" +
             "RESTRICTION: You should specify format of image number (%d - will be replace into 1,2,3, %03d will be replaced into 001, 002);\n" +
-            "Format e.g.: <" + RENAME_IMAGE_FORMAT + ">NativeKiev%d</" + RENAME_IMAGE_FORMAT + "> or <" + RENAME_IMAGE_FORMAT + ">Native%03dKiev</" + RENAME_IMAGE_FORMAT + "> -->\n\n";
+            "Format e.g.: <" + RENAME_IMAGE_FORMAT + ">NativeKiev%d</" + RENAME_IMAGE_FORMAT + "> or <" + RENAME_IMAGE_FORMAT + ">Native%03dKiev</" + RENAME_IMAGE_FORMAT + "> -->\n";
+
+    private final String OPEN_RENAME_IMAGE_TH_FORMAT = "<" + RENAME_IMAGE_TH_FORMAT + ">";
+    private final String CLOSE_RENAME_IMAGE_TH_FORMAT = "</" + RENAME_IMAGE_TH_FORMAT + ">";
 
 	private final String OPEN_FORMAT = "\n<CHANGE_FORMAT_TO>";
 	private final String CLOSE_FORMAT = "</CHANGE_FORMAT_TO><!-- If this field exists than image format would be changed for this. RESTRICTION: File format should be written without quotes and without previous dot."
@@ -115,6 +119,8 @@ public class StringXml {
         toReturn += OPEN_RENAME_IMAGE + String.valueOf(a.shouldRenameFile()) + CLOSE_RENAME_IMAGE;
 
         toReturn += OPEN_RENAME_IMAGE_FORMAT + a.getRenamingFormat() + CLOSE_RENAME_IMAGE_FORMAT;
+
+        toReturn += OPEN_RENAME_IMAGE_TH_FORMAT + a.getThumbnailRenamingFormat() + CLOSE_RENAME_IMAGE_TH_FORMAT;
 
 		toReturn += OPEN_FORMAT + a.getFormat() + CLOSE_FORMAT;
 

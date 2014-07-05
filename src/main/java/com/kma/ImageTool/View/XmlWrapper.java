@@ -21,7 +21,6 @@ import javax.swing.event.DocumentListener;
 
 public class XmlWrapper extends MetroPanel implements ActionListener,
 		DocumentListener {
-	private MetroTextView txtName;
 	private MyButton btnCancel;
 	private MyButton btnOk;
 	private MetroTextView txtDPI;
@@ -43,24 +42,14 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
     private JRadioButton renameFiles;
     private JRadioButton dontRenameFiles;
     private HintTextField renamingFormatTxt;
+    private HintTextField renamingThumbnailFormatTxt;
     private JLabel renamingFormatTxtHelp;
+    private JLabel renamingThumnailFormatTxtHelp;
+    private JLabel imageInfoLbl;
+    private JLabel imageThumbnailInfoLbl;
 
     public XmlWrapper() {
 		setSize(Config.WIDTH_EDITOR, Config.HEIGHT_EDITOR);
-
-		JLabel lblTemplateName = new JLabel("Template name");
-		lblTemplateName.setBounds(10, 11, 120, 25);
-		Decorator.decorateNormal(lblTemplateName);
-		add(lblTemplateName);
-
-		txtName = ComponentFactory.GET.getTextViewForName();
-		txtName.setLocation(150, 11);
-		add(txtName);
-
-		JLabel lbldefault = new JLabel("for default name - leave blank");
-		lbldefault.setBounds(255, 10, 200, 25);
-		Decorator.decorateInfo(lbldefault);
-		add(lbldefault);
 
 		btnOk = ButtonFactory.getNormalButton("Ok");
 		btnOk.setLocation(529, 467);
@@ -71,36 +60,36 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		add(btnCancel);
 
 		JLabel lblDpi = new JLabel("Resolution");
-		lblDpi.setBounds(10, 50, 100, 14);
+		lblDpi.setBounds(10, 10, 100, 14);
 		Decorator.decorateNormal(lblDpi);
 		add(lblDpi);
 
 		txtDPI = ComponentFactory.GET.getMetroTextSmall();
-		txtDPI.setLocation(150, 50);
+		txtDPI.setLocation(150, 10);
 		add(txtDPI);
 		// to restrict changing size if this field is not empty
 		txtDPI.getDocument().addDocumentListener(this);
 
 		JLabel lblDPI = new JLabel("dpi");
-		lblDPI.setBounds(210, 50, 35, 16);
+		lblDPI.setBounds(210, 10, 35, 16);
 		add(lblDPI);
 
 		JSeparator separator = new JSeparator();
-		separator.setBounds(0, 69, 628, 2);
+		separator.setBounds(0, 29, 628, 2);
 		add(separator);
 
 		JLabel lblResize = new JLabel("Resize");
 		Decorator.decorateNormal(lblResize);
-		lblResize.setBounds(10, 75, 46, 14);
+		lblResize.setBounds(10, 35, 46, 14);
 		add(lblResize);
 
 		rdbtnManual = ComponentFactory.GET.getRadioBtn("manual");
 		rdbtnManual.setSelected(true);
-		rdbtnManual.setBounds(67, 71, 75, 23);
+		rdbtnManual.setBounds(67, 30, 100, 23);
 		add(rdbtnManual);
 
 		rdbtnExtended = ComponentFactory.GET.getRadioBtn("extended");
-		rdbtnExtended.setBounds(138, 71, 80, 23);
+		rdbtnExtended.setBounds(138, 30, 100, 23);
 		add(rdbtnExtended);
 
 		ButtonGroup m = new ButtonGroup();
@@ -108,34 +97,34 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		m.add(rdbtnManual);
 
 		pnlExtended = ComponentFactory.GET.getExtendedPanel();
-		pnlExtended.setLocation(0, 100);
+		pnlExtended.setLocation(0, 60);
 		pnlExtended.setVisible(false);
 		add(pnlExtended);
 
 		pnlManual = ComponentFactory.GET.getManualPanel();
-		pnlManual.setLocation(0, 100);
+		pnlManual.setLocation(0, 60);
 		add(pnlManual);
 
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(0, 318, 628, 2);
+		separator_1.setBounds(0, 320, 628, 2);
 		add(separator_1);
 
 		JLabel lblColorMode = new JLabel("Color mode");
 		Decorator.decorateNormal(lblColorMode);
-		lblColorMode.setBounds(10, 331, 94, 14);
+		lblColorMode.setBounds(10, 330, 94, 14);
 		add(lblColorMode);
 
 		chckbxFlattening = ComponentFactory.GET.getCheckBox("flattening");
-		chckbxFlattening.setBounds(54, 438, 81, 23);
+		chckbxFlattening.setBounds(54, 440, 81, 23);
 		add(chckbxFlattening);
 
 		rdbtnMono = ComponentFactory.GET.getRadioBtn("mono");
-		rdbtnMono.setBounds(54, 364, 76, 23);
+		rdbtnMono.setBounds(54, 365, 76, 23);
 		add(rdbtnMono);
 
 		rdbtnColor = ComponentFactory.GET.getRadioBtn("color");
 		rdbtnColor.setSelected(true);
-		rdbtnColor.setBounds(54, 390, 76, 23);
+		rdbtnColor.setBounds(54, 410, 76, 23);
 		add(rdbtnColor);
 
 		ButtonGroup gr = new ButtonGroup();
@@ -145,48 +134,48 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		comboBoxColorModel = new JComboBox();
 		comboBoxColorModel.setModel(new DefaultComboBoxModel(new String[] {
 				"sRGB", "RGB" }));
-		comboBoxColorModel.setBounds(183, 390, 59, 20);
+		comboBoxColorModel.setBounds(183, 410, 59, 20);
 		add(comboBoxColorModel);
 
 		/**
 		 * panel which deploys thumbnail param
 		 */
 		pnlThumbnail = new Thumbnails();
-		pnlThumbnail.setBounds(358, 350, 260, 30);
+		pnlThumbnail.setBounds(358, 370, 260, 30);
 		pnlThumbnail.setVisible(false);
 		add(pnlThumbnail);
 
 		JLabel lblThumbnail = new JLabel("Thumbnail");
 		Decorator.decorateNormal(lblThumbnail);
-		lblThumbnail.setBounds(344, 331, 89, 14);
+		lblThumbnail.setBounds(344, 340, 89, 14);
 		add(lblThumbnail);
 
 		comboBoxFormat = new JComboBox();
 		comboBoxFormat.setModel(new DefaultComboBoxModel(new String[] { "gif",
 				"png", "tiff", "tif", "jpg", "jpeg" }));
-		comboBoxFormat.setBounds(183, 438, 59, 20);
+		comboBoxFormat.setBounds(183, 440, 59, 20);
 		comboBoxFormat.addActionListener(this);
 		add(comboBoxFormat);
 
 		chckbThumbnail = ComponentFactory.GET.getCheckBox("");
-		chckbThumbnail.setBounds(430, 327, 26, 23);
+		chckbThumbnail.setBounds(430, 330, 26, 23);
 		chckbThumbnail.setSelected(false);
 		add(chckbThumbnail);
 
 		txtCompression = ComponentFactory.GET.getMetroTextSmall();
-		txtCompression.setLocation(183, 473);
+		txtCompression.setLocation(183, 470);
 		txtCompression.setVisible(false);
 		add(txtCompression);
 
 		label = new JLabel("%");
 		Decorator.decorateInfo(label);
-		label.setBounds(250, 476, 18, 14);
+		label.setBounds(250, 475, 18, 14);
 		label.setVisible(false);
 		add(label);
 
 		lblCompression = new JLabel("compression");
 		Decorator.decorateInfo(lblCompression);
-		lblCompression.setBounds(114, 476, 76, 14);
+		lblCompression.setBounds(114, 475, 76, 14);
 		lblCompression.setVisible(false);
 		add(lblCompression);
 
@@ -199,7 +188,7 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
         final String kRenameFiles = "Rename with format";
 
         final int xOffset = 10;
-        final int yOffset = 220;
+        final int yOffset = 180;
 
         JLabel renameLbl = new JLabel(kRename);
         Decorator.decorateNormal(renameLbl);
@@ -222,8 +211,14 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
         gr.add(dontRenameFiles);
         gr.add(renameFiles);
 
+        imageInfoLbl = new JLabel("image");
+        Decorator.decorateInfo(imageInfoLbl);
+        imageInfoLbl.setBounds(renameFiles.getX() + 10, renameFiles.getY() + renameFiles.getHeight() + 10, 50, fontHeight());
+        imageInfoLbl.setVisible(false);
+        add(imageInfoLbl);
+
         renamingFormatTxt = new HintTextField("e.g: outputName.f-%03d");
-        renamingFormatTxt.setBounds(renameFiles.getX() + 30, renameFiles.getY() + renameFiles.getHeight() + 10, 200, fontHeight());
+        renamingFormatTxt.setBounds(imageInfoLbl.getX() + imageInfoLbl.getWidth() + 10, renameFiles.getY() + renameFiles.getHeight() + 10, 200, fontHeight()+5);
         renamingFormatTxt.setVisible(false);
         add(renamingFormatTxt);
 
@@ -232,6 +227,23 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
         renamingFormatTxtHelp.setBounds(renamingFormatTxt.getX() + renamingFormatTxt.getWidth() + 10, renamingFormatTxt.getY(), 300, renamingFormatTxt.getHeight());
         renamingFormatTxtHelp.setVisible(false);
         add(renamingFormatTxtHelp);
+
+        imageThumbnailInfoLbl = new JLabel("thumbnail");
+        Decorator.decorateInfo(imageThumbnailInfoLbl);
+        imageThumbnailInfoLbl.setVisible(false);
+        imageThumbnailInfoLbl.setBounds(imageInfoLbl.getX(), imageInfoLbl.getY() + imageInfoLbl.getHeight() + 10, imageInfoLbl.getWidth(), fontHeight());
+        add(imageThumbnailInfoLbl);
+
+        renamingThumbnailFormatTxt = new HintTextField("e.g: outputName.f-%03d.th");
+        renamingThumbnailFormatTxt.setBounds(renamingFormatTxt.getX(), renamingFormatTxt.getY() + renamingFormatTxt.getHeight() + 10, renamingFormatTxt.getWidth(), fontHeight()+5);
+        renamingThumbnailFormatTxt.setVisible(false);
+        add(renamingThumbnailFormatTxt);
+
+        renamingThumnailFormatTxtHelp = new JLabel("leave blank for intelligent renaming");
+        Decorator.decorateInfo(renamingThumnailFormatTxtHelp);
+        renamingThumnailFormatTxtHelp.setBounds(renamingFormatTxtHelp.getX(), renamingFormatTxtHelp.getY() + renamingFormatTxtHelp.getHeight() + 10, renamingFormatTxtHelp.getWidth(), renamingFormatTxtHelp.getHeight());
+        renamingThumnailFormatTxtHelp.setVisible(false);
+        add(renamingThumnailFormatTxtHelp);
 
     }
 
@@ -245,7 +257,6 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 	 * to clean all fields
 	 */
 	public void clean() {
-		txtName.setText("");
 
 		txtDPI.setText("");
 
@@ -386,14 +397,14 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
         boolean visible = getRenameFiles().isSelected();
         getRenamingFormatTxt().setVisible(visible);
         getRenamingFormatTxtHelp().setVisible(visible);
+        getRenamingThumbnailFormatTxt().setVisible(visible);
+        getRenamingThumnailFormatTxtHelp().setVisible(visible);
+        getImageInfoLbl().setVisible(visible);
+        getImageThumbnailInfoLbl().setVisible(visible);
     }
 
 	// /////////////////////////// GETTERS SETTERS PART
 	// ///////////////////////////////
-
-	public MetroTextView getTxtName() {
-		return txtName;
-	}
 
 	public MyButton getBtnCancel() {
 		return btnCancel;
@@ -476,6 +487,26 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
         return dontRenameFiles;
     }
 
+    public JTextField getRenamingThumbnailFormatTxt() {
+        return renamingThumbnailFormatTxt;
+    }
+
+    public void setRenamingThumbnailFormatTxt(HintTextField renamingThumbnailFormatTxt) {
+        this.renamingThumbnailFormatTxt = renamingThumbnailFormatTxt;
+    }
+
+    public JLabel getRenamingThumnailFormatTxtHelp() {
+        return renamingThumnailFormatTxtHelp;
+    }
+
+    public JLabel getImageInfoLbl() {
+        return imageInfoLbl;
+    }
+
+    public JLabel getImageThumbnailInfoLbl() {
+        return imageThumbnailInfoLbl;
+    }
+
     /**
 	 * Place all values from xml file to this form
 	 * 
@@ -487,9 +518,6 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 
 		if (imageWorkingWith.getResolutionDPI() > 0) {
 			txtDPI.setText(Integer.toString(imageWorkingWith.getResolutionDPI()));
-		}
-		if (!imageWorkingWith.getNewName().equals("")) {
-			txtName.setText(imageWorkingWith.getNewName());
 		}
 
 		if (imageWorkingWith.isFlatteningImage()) {
@@ -781,6 +809,7 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 
         // naming settings
         renamingFormatTxt.setText(imageWorkingWith.getRenamingFormat());
+        renamingThumbnailFormatTxt.setText(imageWorkingWith.getRenamingFormatThumbnail());
         // enable option
         renameFiles.setSelected(imageWorkingWith.shouldRenameFile());
         // update view

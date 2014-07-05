@@ -26,3 +26,19 @@ E.g:
 myFormat%d -> myFormat1, myFormat2 ..
 myFormat%03d -> myFormat001, myFormat002 ..
 myFormat%03d.lo -> myFormat001.lo ..
+
+No need to change file name for:
+NTU CRM PLOS, TTP, Maney / IOM, ERS (erj, erm and err), USP, JCS, PUP, TPM
+
+Set specific format for:
+- CDI
+- IPEM
+- JBR
+- MED
+- NASP
+- SCI
+- AMH
+- BIO
+- BCD
+- SPER
+- BJB

@@ -11,5 +11,6 @@ public class HRenameConvention implements Handler{
     public void execute(XmlWrapper wr, ImageParametrs ip) {
         ip.setShouldRenameFile(wr.getRenameFiles().isSelected());
         ip.setRenamingFormat(wr.getRenamingFormatTxt().getText());
+        ip.setThumbnailRenamingFormat(wr.getRenamingThumbnailFormatTxt().getText());
     }
 }

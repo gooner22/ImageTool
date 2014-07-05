@@ -12,6 +12,7 @@ public class ImageParametrs {
     @Deprecated
 	String newName = "";
     String renamingFormat = "";
+    String thumbnailRenamingFormat = "";
     String format = "";
 	String changeColorModel = "";
 
@@ -73,7 +74,7 @@ public class ImageParametrs {
 
     private boolean shouldRenameFile = false;
 
-	public boolean isSizeIsManual() {
+    public boolean isSizeIsManual() {
 		return sizeIsManual;
 	}
 
@@ -105,10 +106,12 @@ public class ImageParametrs {
 		this.resolutionDPI = resolutionDPI;
 	}
 
+    @Deprecated
 	public String getNewName() {
 		return newName;
 	}
 
+    @Deprecated
 	public void setNewName(String newName) {
 		this.newName = newName;
 	}
@@ -544,7 +547,7 @@ public class ImageParametrs {
 
     @Override
 	public String toString() {
-		return "ImageParametrs [newName=" + newName + ", format=" + format
+		return "ImageParametrs [renamingFormat=" + renamingFormat + ", format=" + format
 				+ ", changeColorModel=" + changeColorModel + ", resolutionDPI="
 				+ resolutionDPI + ", sizeHeight=" + sizeHeight + ", sizeWidth="
 				+ sizeWidth + ", resizePercentage=" + resizePercentage
@@ -588,4 +591,11 @@ public class ImageParametrs {
 				+ isMoreWidth + "]";
 	}
 
+    public void setThumbnailRenamingFormat(String thumbnailRenamingFormat) {
+        this.thumbnailRenamingFormat = thumbnailRenamingFormat;
+    }
+
+    public String getThumbnailRenamingFormat() {
+        return thumbnailRenamingFormat;
+    }
 }

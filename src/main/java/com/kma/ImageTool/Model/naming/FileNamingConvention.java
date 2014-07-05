@@ -38,23 +38,12 @@ public class FileNamingConvention {
                 sourceFileName.isEmpty())
             throw new IllegalArgumentException();
 
-        HashMap<String, Matcher> map = new HashMap<String, Matcher>();
 
          // try to find corresponding regex
         for (String regex : POSSIBLE_REGEXS){
             Matcher m = Pattern.compile(regex).matcher(sourceFileName);
             if (m.matches()){
-                map.put(regex, m);
-            }
-        }
-
-        if(map.keySet().size()==1){
-            final String regex = map.keySet().iterator().next();
-            return new MatcherWrapper(map.get(regex),regex);
-        }else {
-            if(map.containsKey(Constants.REGEX_GENERAL) &&
-                    map.containsKey(Constants.REGEX_BIO)){
-                return new MatcherWrapper(map.get(Constants.REGEX_GENERAL), Constants.REGEX_GENERAL);
+                return new MatcherWrapper(m, regex);
             }
         }
 

@@ -16,7 +16,8 @@ public class ImageParameterFetch {
 
     @Deprecated
 	private String newName;
-	private String renamingFormat;
+	private String renamingFormat = "";
+	private String renamingFormatThumbnail = "";
 	private String format;
 	private String changeColorModel;
 
@@ -123,10 +124,12 @@ public class ImageParameterFetch {
 		setOfSetsOfOldValues.add(oldValues);
 	}
 
+    @Deprecated
 	public String getNewName() {
 		return newName;
 	}
 
+    @Deprecated
 	public void setNewName(String newName) {
 		this.newName = newName;
 	}
@@ -503,6 +506,13 @@ public class ImageParameterFetch {
         this.renamingFormat = renamingFormat;
     }
 
+    public String getRenamingFormatThumbnail() {
+        return renamingFormatThumbnail;
+    }
+
+    public void setRenamingFormatThumbnail(String renamingFormatThumbnail) {
+        this.renamingFormatThumbnail = renamingFormatThumbnail;
+    }
 
     @Override
 	public String toString() {

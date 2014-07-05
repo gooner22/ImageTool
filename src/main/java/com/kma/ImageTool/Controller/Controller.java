@@ -238,10 +238,10 @@ public class Controller {
                         isProblem = true;
                         mainArea.getLblInfo().setText("");
                     }
-                } catch (InvalidImageFileNameException e) {
+                } catch (Exception e){
                     InfoBox.BOX
                             .alert(frame,
-                                    "Wrong file naming convention");
+                                    e.getMessage());
                     isProblem = true;
                     mainArea.getLblInfo().setText("");
                 }
