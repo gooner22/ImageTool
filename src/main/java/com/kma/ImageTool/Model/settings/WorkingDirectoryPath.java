@@ -28,7 +28,7 @@ public class WorkingDirectoryPath implements Serializable {
             out.writeObject(this);
             out.close();
             fileOut.close();
-            System.out.printf("WorkingDirectoryPath saved into: " + TMP_WORKING_DIR_PATH_SER);
+            System.out.println("WorkingDirectoryPath saved into: " + TMP_WORKING_DIR_PATH_SER);
         }catch(IOException i)
         {
             i.printStackTrace();

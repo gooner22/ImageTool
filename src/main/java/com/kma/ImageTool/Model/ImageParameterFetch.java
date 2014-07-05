@@ -14,7 +14,9 @@ public class ImageParameterFetch {
 	@SuppressWarnings("rawtypes")
 	private List<ArrayList> setOfSetsOfOldValues = new ArrayList<ArrayList>();
 
+    @Deprecated
 	private String newName;
+	private String renamingFormat;
 	private String format;
 	private String changeColorModel;
 
@@ -62,6 +64,8 @@ public class ImageParameterFetch {
 
 	private boolean changeToMono = false;
 	private boolean flatteningImage = false;
+
+    private boolean shouldRenameFile = false;
 
 	public ImageParameterFetch() {
 		this.newName = new String("");
@@ -483,7 +487,24 @@ public class ImageParameterFetch {
 		this.typeOfBetweenHeightToChange = typeOfBetweenHeightToChange;
 	}
 
-	@Override
+    public boolean shouldRenameFile() {
+        return shouldRenameFile;
+    }
+
+    public void setShouldRenameFile(boolean shouldRenameFile) {
+        this.shouldRenameFile = shouldRenameFile;
+    }
+
+    public String getRenamingFormat() {
+        return renamingFormat;
+    }
+
+    public void setRenamingFormat(String renamingFormat) {
+        this.renamingFormat = renamingFormat;
+    }
+
+
+    @Override
 	public String toString() {
 		return "ImageParameterFetch [setOfSetsOfOldValues="
 				+ setOfSetsOfOldValues + ", newName=" + newName + ", format="

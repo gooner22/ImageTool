@@ -379,6 +379,15 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 
 	}
 
+    /**
+     * change visibility of helper text fields
+     */
+    public void showRenamingField() {
+        boolean visible = getRenameFiles().isSelected();
+        getRenamingFormatTxt().setVisible(visible);
+        getRenamingFormatTxtHelp().setVisible(visible);
+    }
+
 	// /////////////////////////// GETTERS SETTERS PART
 	// ///////////////////////////////
 
@@ -770,6 +779,12 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 			}
 		}
 
+        // naming settings
+        renamingFormatTxt.setText(imageWorkingWith.getRenamingFormat());
+        // enable option
+        renameFiles.setSelected(imageWorkingWith.shouldRenameFile());
+        // update view
+        showRenamingField();
 	}
 
 	/**

@@ -1,22 +1,15 @@
 package com.kma.ImageTool.Model;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import com.kma.ImageTool.DataStrategy.StringXml;
+import com.kma.ImageTool.DTO.ImageParametrs;
 import com.kma.ImageTool.DataStrategy.XmlKeys;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.kma.ImageTool.DTO.ImageParametrs;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import java.io.*;
 
 /**
  * Class that fetching parameters from XML File old one that is why don't use
@@ -38,7 +31,8 @@ public class ParseXML {
 
 			DefaultHandler handler = new DefaultHandler() {
 
-				private String renameFormat;
+				private boolean shouldRename = false;
+				private boolean renameFormat = false;
 				private boolean changeResolution = false;
 				private boolean changeFormat = false;
 				private boolean changeSize = false;
@@ -76,9 +70,12 @@ public class ParseXML {
 					}
 
 					if (qName.equalsIgnoreCase(XmlKeys.RENAME_IMAGE_FORMAT)) {
-                        // TODO : Receive from xml
-                        renameFormat = "";
+                        renameFormat = true;
 					}
+
+                    if (qName.equalsIgnoreCase(XmlKeys.RENAME_IMAGE)) {
+                        shouldRename = true;
+                    }
 
 					if (qName.equalsIgnoreCase("CHANGE_RESOLUTION_TO")) {
 						changeResolution = true;
@@ -1224,6 +1221,26 @@ public class ParseXML {
 						qualityCompressionForJPEGImages = false;
 					}
 
+
+                    if(shouldRename){
+                        shouldRename = false;
+                        String str = new String(ch, start, length);
+                        if (checkForCharInString(str, length)) {
+                            try {
+                                imageWorkingWith.setShouldRenameFile(Boolean.valueOf(str));
+                            } catch (NumberFormatException nfe) {
+                                haveAnError = true;
+                            }
+                        }
+                    }
+
+                    if (renameFormat){
+                        renameFormat = false;
+                        String str = new String(ch, start, length);
+                        if (checkForCharInString(str, length)) {
+                            imageWorkingWith.setRenamingFormat(str);
+                        }
+                    }
 			
 				}
 

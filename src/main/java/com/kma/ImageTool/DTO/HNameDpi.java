@@ -12,7 +12,9 @@ public class HNameDpi implements Handler {
 
 	@Override
 	public void execute(XmlWrapper wr, ImageParametrs ip) {
-		ip.setNewName(wr.getTxtName().getText());
+        // TODO: investigate line below ?
+//		ip.setNewName(wr.getTxtName().getText());
+
 		// if need to check if empty set "" or default
 		ip.setResolutionDPI(wr.getTxtDPI().getText());
 	}

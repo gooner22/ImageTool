@@ -390,19 +390,9 @@ public class Controller {
 			return;
 		}
 
-        if (source == wrapper.getRenameFiles()) {
-            if(wrapper.getRenameFiles().isSelected()) {
-                wrapper.getRenamingFormatTxt().setVisible(true);
-                wrapper.getRenamingFormatTxtHelp().setVisible(true);
-            }
-            return;
-        }
-
-        if(source == wrapper.getDontRenameFiles()){
-            if(wrapper.getDontRenameFiles().isSelected()){
-                wrapper.getRenamingFormatTxt().setVisible(false);
-                wrapper.getRenamingFormatTxtHelp().setVisible(false);
-            }
+        if (source == wrapper.getRenameFiles() ||
+                source == wrapper.getDontRenameFiles()) {
+            wrapper.showRenamingField();
             return;
         }
 

@@ -2,6 +2,7 @@ package com.kma.ImageTool.DataStrategy;
 
 import com.kma.ImageTool.DTO.ImageParametrs;
 
+import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE;
 import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE_FORMAT;
 
 public class StringXml {
@@ -10,8 +11,14 @@ public class StringXml {
     private final String HEADER = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
 			+ "<!-- Edited by mintCar -->\n<IMAGES_FOR_EDIT>\n\n";
 
-	private final String OPEN_RENAME = "<" + RENAME_IMAGE_FORMAT + ">";
-	private final String CLOSE_RENAME = "</" + RENAME_IMAGE_FORMAT + "><!-- If this field is not empty than image would be renamed using this format. RESTRICTION: You should not write an extension of the file, only NAME required without quotes; You should specify format of image number (%d - will be replace into 1,2,3, %03d will be replaced into 001, 002); Format e.g.: <" + RENAME_IMAGE_FORMAT + ">NativeKiev%d</" + RENAME_IMAGE_FORMAT + "> or <" + RENAME_IMAGE_FORMAT + ">Native%03dKiev</" + RENAME_IMAGE_FORMAT + "> -->\n\n";
+	private final String OPEN_RENAME_IMAGE = "<" + RENAME_IMAGE + ">";
+	private final String CLOSE_RENAME_IMAGE = "</" + RENAME_IMAGE + "><!-- If his field is 1 - then renaming rule will be applied to image files. -->\n";
+
+    private final String OPEN_RENAME_IMAGE_FORMAT = "<" + RENAME_IMAGE_FORMAT + ">";
+	private final String CLOSE_RENAME_IMAGE_FORMAT = "</" + RENAME_IMAGE_FORMAT + "><!-- If this field is not empty then image will be renamed using this format. When empty - built-in intelligent rules will be used.\n" +
+            "RESTRICTION: You should not write an extension of the file, only NAME required without quotes;\n" +
+            "RESTRICTION: You should specify format of image number (%d - will be replace into 1,2,3, %03d will be replaced into 001, 002);\n" +
+            "Format e.g.: <" + RENAME_IMAGE_FORMAT + ">NativeKiev%d</" + RENAME_IMAGE_FORMAT + "> or <" + RENAME_IMAGE_FORMAT + ">Native%03dKiev</" + RENAME_IMAGE_FORMAT + "> -->\n\n";
 
 	private final String OPEN_FORMAT = "\n<CHANGE_FORMAT_TO>";
 	private final String CLOSE_FORMAT = "</CHANGE_FORMAT_TO><!-- If this field exists than image format would be changed for this. RESTRICTION: File format should be written without quotes and without previous dot."
@@ -105,9 +112,9 @@ public class StringXml {
 
 		toReturn += HEADER;
 
-		if (!a.newName.equals("")) {
-			toReturn += OPEN_RENAME + a.getNewName() + CLOSE_RENAME;
-		}
+        toReturn += OPEN_RENAME_IMAGE + String.valueOf(a.shouldRenameFile()) + CLOSE_RENAME_IMAGE;
+
+        toReturn += OPEN_RENAME_IMAGE_FORMAT + a.getRenamingFormat() + CLOSE_RENAME_IMAGE_FORMAT;
 
 		toReturn += OPEN_FORMAT + a.getFormat() + CLOSE_FORMAT;
 

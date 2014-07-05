@@ -1,12 +1,6 @@
 package com.kma.ImageTool.DataStrategy;
 
-import com.kma.ImageTool.DTO.HColorModel;
-import com.kma.ImageTool.DTO.HExtended;
-import com.kma.ImageTool.DTO.HManualSize;
-import com.kma.ImageTool.DTO.HNameDpi;
-import com.kma.ImageTool.DTO.HThumbnail;
-import com.kma.ImageTool.DTO.HandleManager;
-import com.kma.ImageTool.DTO.ImageParametrs;
+import com.kma.ImageTool.DTO.*;
 import com.kma.ImageTool.View.XmlWrapper;
 
 /**
@@ -25,6 +19,8 @@ public class HoldDataStrategy extends Strategy {
 		manager.registerHandler(new HManualSize());
 		manager.registerHandler(new HNameDpi());
 		manager.registerHandler(new HThumbnail());
+		manager.registerHandler(new HRenameConvention());
+
 
 		super.setImage(manager.getImageParamets(wr));
 

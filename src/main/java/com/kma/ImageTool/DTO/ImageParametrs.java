@@ -9,8 +9,10 @@ package com.kma.ImageTool.DTO;
  */
 public class ImageParametrs {
 
-	public String newName = "";
-	String format = "";
+    @Deprecated
+	String newName = "";
+    String renamingFormat = "";
+    String format = "";
 	String changeColorModel = "";
 
 	String resolutionDPI = "";
@@ -68,6 +70,8 @@ public class ImageParametrs {
 	boolean isLessWidth;
 	boolean isBetweenWidth;
 	boolean isMoreWidth;
+
+    private boolean shouldRenameFile = false;
 
 	public boolean isSizeIsManual() {
 		return sizeIsManual;
@@ -522,7 +526,23 @@ public class ImageParametrs {
 		this.typeOfBetweenHeightToChange = typeOfBetweenHeightToChange;
 	}
 
-	@Override
+    public String getRenamingFormat() {
+        return renamingFormat;
+    }
+
+    public void setRenamingFormat(String renamingFormat) {
+        this.renamingFormat = renamingFormat;
+    }
+
+    public boolean shouldRenameFile() {
+        return shouldRenameFile;
+    }
+
+    public void setShouldRenameFile(boolean shouldRenameFile) {
+        this.shouldRenameFile = shouldRenameFile;
+    }
+
+    @Override
 	public String toString() {
 		return "ImageParametrs [newName=" + newName + ", format=" + format
 				+ ", changeColorModel=" + changeColorModel + ", resolutionDPI="
