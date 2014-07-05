@@ -4,7 +4,6 @@ import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
 
 import javax.swing.JFileChooser;
 import javax.swing.SwingWorker;
@@ -12,8 +11,10 @@ import javax.swing.SwingWorker;
 import com.kma.ImageTool.DTO.ImageParametrs;
 import com.kma.ImageTool.DataStrategy.HoldDataStrategy;
 import com.kma.ImageTool.DataStrategy.Strategy;
+import com.kma.ImageTool.Error.InvalidImageFileNameException;
 import com.kma.ImageTool.Error.NotExistingXMLError;
 import com.kma.ImageTool.Model.Model;
+import com.kma.ImageTool.Model.settings.WorkingDirectoryPath;
 import com.kma.ImageTool.View.MainArea;
 import com.kma.ImageTool.View.MainContainer;
 import com.kma.ImageTool.View.MainImageMagic;
@@ -133,10 +134,12 @@ public class Controller {
 			}
 
 			if (source == mainArea.getBtnRun()) {
-				if (checkPath()) {
+                final String pathToImageFolder = mainArea.getTextField().getText();
+                if (checkPath(pathToImageFolder)) {
 					// set path to image folder
 					invokeEditor();
 
+                    mainArea.savePathToImageFolder(pathToImageFolder);
 				} else {
 					InfoBox.BOX.info(mainArea, "Please choose path first");
 				}
@@ -147,7 +150,8 @@ public class Controller {
 			// END of MainAreaListener
 	}
 
-	/**
+
+    /**
 	 * This one holding all delegated ActionListener FRom XmlEditor com.kma.ImageTool.View
 	 * 
 	 * @author yaroslav
@@ -226,14 +230,24 @@ public class Controller {
 						"Please wait while we converting your images");
 				mainArea.getBtnRun().setEnabled(false);
 				invokeMain();
-				if (!Model.GET.doRunEditing()) {
-					InfoBox.BOX
-							.alert(frame,
-									"Could not find images in the folder, or problem has happened");
-					isProblem = true;
-					mainArea.getLblInfo().setText("");
-				}
-				return null;
+                try {
+                    if (!Model.GET.doRunEditing()) {
+                        InfoBox.BOX
+                                .alert(frame,
+                                        "Could not find images in the folder, or problem has happened");
+                        isProblem = true;
+                        mainArea.getLblInfo().setText("");
+                    }
+                } catch (InvalidImageFileNameException e) {
+                    InfoBox.BOX
+                            .alert(frame,
+                                    "Wrong file naming convention");
+                    isProblem = true;
+                    mainArea.getLblInfo().setText("");
+                }
+
+                return null;
+
 			}
 
 			@Override
@@ -376,6 +390,22 @@ public class Controller {
 			return;
 		}
 
+        if (source == wrapper.getRenameFiles()) {
+            if(wrapper.getRenameFiles().isSelected()) {
+                wrapper.getRenamingFormatTxt().setVisible(true);
+                wrapper.getRenamingFormatTxtHelp().setVisible(true);
+            }
+            return;
+        }
+
+        if(source == wrapper.getDontRenameFiles()){
+            if(wrapper.getDontRenameFiles().isSelected()){
+                wrapper.getRenamingFormatTxt().setVisible(false);
+                wrapper.getRenamingFormatTxtHelp().setVisible(false);
+            }
+            return;
+        }
+
 	}
 
 	private void initEditor() {
@@ -439,8 +469,8 @@ public class Controller {
 		}
 	}
 
-	private boolean checkPath() {
-		if (mainArea.getTextField().getText().equals("")) {
+	private boolean checkPath(String path) {
+		if (path.equals("")) {
 			return false;
 
 		}

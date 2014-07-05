@@ -9,6 +9,8 @@ import java.io.Reader;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import com.kma.ImageTool.DataStrategy.StringXml;
+import com.kma.ImageTool.DataStrategy.XmlKeys;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -36,7 +38,7 @@ public class ParseXML {
 
 			DefaultHandler handler = new DefaultHandler() {
 
-				private boolean renameFor = false;
+				private String renameFormat;
 				private boolean changeResolution = false;
 				private boolean changeFormat = false;
 				private boolean changeSize = false;
@@ -73,8 +75,9 @@ public class ParseXML {
 					if (!qName.equalsIgnoreCase("IMAGES_TO_EDIT")) {
 					}
 
-					if (qName.equalsIgnoreCase("RENAME_IMAGE_TO")) {
-						renameFor = true;
+					if (qName.equalsIgnoreCase(XmlKeys.RENAME_IMAGE_FORMAT)) {
+                        // TODO : Receive from xml
+                        renameFormat = "";
 					}
 
 					if (qName.equalsIgnoreCase("CHANGE_RESOLUTION_TO")) {
@@ -356,14 +359,15 @@ public class ParseXML {
 				public void characters(char ch[], int start, int length)
 						throws SAXException {
 
-					if (renameFor) {
-						String newName = new String(ch, start, length);
-						if (checkForCharInString(newName, length)) {
-							imageWorkingWith.setNewName(newName);
-							
-						}
-						renameFor = false;
-					}
+                    // TODO: implement rename logics
+//					if (renameFor) {
+//						String newName = new String(ch, start, length);
+//						if (checkForCharInString(newName, length)) {
+//							imageWorkingWith.setNewName(newName);
+//
+//						}
+//						renameFor = false;
+//					}
 
 					if (parameterForChangeSizeOfHeightIfLess) {
 						String parameter = new String(ch, start, length);

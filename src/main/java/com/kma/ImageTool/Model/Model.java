@@ -2,6 +2,7 @@ package com.kma.ImageTool.Model;
 
 import com.kma.ImageTool.DTO.ImageParametrs;
 import com.kma.ImageTool.DataStrategy.StringXml;
+import com.kma.ImageTool.Error.InvalidImageFileNameException;
 import com.kma.ImageTool.Error.NotExistingXMLError;
 
 import java.io.*;
@@ -223,7 +224,7 @@ public enum Model {
 	/**
 	 * Start process of editing images
 	 */
-	public boolean doRunEditing() {
+	public boolean doRunEditing() throws InvalidImageFileNameException {
 		try {
 			WorkingWithImage wwi = new WorkingWithImage(
 					getImageFetch(getXmlFile()));

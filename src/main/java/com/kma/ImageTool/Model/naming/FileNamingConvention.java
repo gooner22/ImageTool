@@ -4,6 +4,7 @@ import com.kma.ImageTool.Error.InvalidImageFileNameException;
 import com.kma.ImageTool.Model.naming.strategy.impl.StrategyChooser;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,7 +16,12 @@ import java.util.regex.Pattern;
 public class FileNamingConvention {
 
 
-    public static final List<String> POSSIBLE_REGEXS = Arrays.asList(Constants.REGEX_BCD, Constants.REGEX_GENERAL, Constants.REGEX_HYPHEN_SEPARATOR);
+    public static final List<String> POSSIBLE_REGEXS = Arrays.asList(
+            Constants.REGEX_BCD,
+            Constants.REGEX_SGM,
+            Constants.REGEX_GENERAL,
+            Constants.REGEX_BIO,
+            Constants.REGEX_BJB);
     private static StrategyChooser strategyChooser = new StrategyChooser();
 
     public static String getOutputFileName(final String sourceFileName) throws InvalidImageFileNameException {
@@ -32,11 +38,24 @@ public class FileNamingConvention {
                 sourceFileName.isEmpty())
             throw new IllegalArgumentException();
 
+        HashMap<String, Matcher> map = new HashMap<String, Matcher>();
+
          // try to find corresponding regex
         for (String regex : POSSIBLE_REGEXS){
             Matcher m = Pattern.compile(regex).matcher(sourceFileName);
-            if (m.matches())
-                return new MatcherWrapper(m,regex);
+            if (m.matches()){
+                map.put(regex, m);
+            }
+        }
+
+        if(map.keySet().size()==1){
+            final String regex = map.keySet().iterator().next();
+            return new MatcherWrapper(map.get(regex),regex);
+        }else {
+            if(map.containsKey(Constants.REGEX_GENERAL) &&
+                    map.containsKey(Constants.REGEX_BIO)){
+                return new MatcherWrapper(map.get(Constants.REGEX_GENERAL), Constants.REGEX_GENERAL);
+            }
         }
 
         // throw exception in case sourceFileName didn't match any pattern

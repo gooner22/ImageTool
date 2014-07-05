@@ -1,6 +1,6 @@
 package com.kma.ImageTool.View;
 
-import java.awt.Component;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,14 +15,7 @@ import com.kma.ImageTool.ViewComponents.MetroPanel;
 import com.kma.ImageTool.ViewComponents.MetroTextView;
 import com.kma.ImageTool.ViewComponents.MyButton;
 
-import javax.swing.ButtonGroup;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JSeparator;
-import javax.swing.JRadioButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
+import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -42,12 +35,17 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 	private JComboBox comboBoxColorModel;
 	private JComboBox comboBoxFormat;
 	private JCheckBox chckbThumbnail;
+	private JComboBox comboBoxRenameFiles;
 	private ManualPanel pnlManual;
 	private JTextField txtCompression;
 	private Component label;
 	private Component lblCompression;
+    private JRadioButton renameFiles;
+    private JRadioButton dontRenameFiles;
+    private HintTextField renamingFormatTxt;
+    private JLabel renamingFormatTxtHelp;
 
-	public XmlWrapper() {
+    public XmlWrapper() {
 		setSize(Config.WIDTH_EDITOR, Config.HEIGHT_EDITOR);
 
 		JLabel lblTemplateName = new JLabel("Template name");
@@ -73,7 +71,7 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		add(btnCancel);
 
 		JLabel lblDpi = new JLabel("Resolution");
-		lblDpi.setBounds(10, 50, 70, 14);
+		lblDpi.setBounds(10, 50, 100, 14);
 		Decorator.decorateNormal(lblDpi);
 		add(lblDpi);
 
@@ -192,9 +190,57 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		lblCompression.setVisible(false);
 		add(lblCompression);
 
+        addNamingItems();
 	}
 
-	/**
+    private void addNamingItems() {
+        final String kRename = "Rename";
+        final String KNRenameFiles = "Don't rename files";
+        final String kRenameFiles = "Rename with format";
+
+        final int xOffset = 10;
+        final int yOffset = 220;
+
+        JLabel renameLbl = new JLabel(kRename);
+        Decorator.decorateNormal(renameLbl);
+        renameLbl.setBounds(xOffset, yOffset, 100, fontHeight());
+        add(renameLbl);
+
+        dontRenameFiles = new JRadioButton(KNRenameFiles);
+        Decorator.decorateNormal(dontRenameFiles);
+        dontRenameFiles.setSelected(true);
+        dontRenameFiles.setBounds(renameLbl.getX() + 44, renameLbl.getY() + renameLbl.getHeight() + 5, 200, fontHeight());
+
+        renameFiles = new JRadioButton(kRenameFiles);
+        Decorator.decorateNormal(renameFiles);
+            renameFiles.setBounds(dontRenameFiles.getX(), dontRenameFiles.getY() + dontRenameFiles.getHeight() + 10, 250, fontHeight());
+
+        add(dontRenameFiles);
+        add(renameFiles);
+
+        ButtonGroup gr = new ButtonGroup();
+        gr.add(dontRenameFiles);
+        gr.add(renameFiles);
+
+        renamingFormatTxt = new HintTextField("e.g: outputName.f-%03d");
+        renamingFormatTxt.setBounds(renameFiles.getX() + 30, renameFiles.getY() + renameFiles.getHeight() + 10, 200, fontHeight());
+        renamingFormatTxt.setVisible(false);
+        add(renamingFormatTxt);
+
+        renamingFormatTxtHelp = new JLabel("leave blank for intelligent renaming");
+        Decorator.decorateInfo(renamingFormatTxtHelp);
+        renamingFormatTxtHelp.setBounds(renamingFormatTxt.getX() + renamingFormatTxt.getWidth() + 10, renamingFormatTxt.getY(), 300, renamingFormatTxt.getHeight());
+        renamingFormatTxtHelp.setVisible(false);
+        add(renamingFormatTxtHelp);
+
+    }
+
+
+    private int fontHeight() {
+        return getFontMetrics(Decorator.getFont()).getHeight();
+    }
+
+    /**
 	 * 
 	 * to clean all fields
 	 */
@@ -281,6 +327,9 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		// check buttons
 		chckbxFlattening.addActionListener(l);
 		chckbThumbnail.addActionListener(l);
+
+        renameFiles.addActionListener(l);
+        dontRenameFiles.addActionListener(l);
 
 	}
 
@@ -397,11 +446,28 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		return txtCompression;
 	}
 
-	public void setTxtCompression(JTextField txtCompression) {
+    public JTextField getRenamingFormatTxt() {
+        return renamingFormatTxt;
+    }
+
+    public JLabel getRenamingFormatTxtHelp() {
+        return renamingFormatTxtHelp;
+    }
+
+    public void setTxtCompression(JTextField txtCompression) {
 		this.txtCompression = txtCompression;
 	}
 
-	/**
+
+    public JRadioButton getRenameFiles() {
+        return renameFiles;
+    }
+
+    public JRadioButton getDontRenameFiles() {
+        return dontRenameFiles;
+    }
+
+    /**
 	 * Place all values from xml file to this form
 	 * 
 	 * A lot of ifs goes here

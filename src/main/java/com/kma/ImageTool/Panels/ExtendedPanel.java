@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 
 import com.kma.ImageTool.View.Config;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,7 +22,7 @@ public class ExtendedPanel extends JPanel implements ActionListener {
 
 	public ExtendedPanel() {
 		setBackground(Config.bColor);
-		setSize(628, 216);
+		setSize(628, 100);
 		setLayout(null);
 
 		pnlWidth = new HalfManual("width");

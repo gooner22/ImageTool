@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import com.kma.ImageTool.Factories.ButtonFactory;
 import com.kma.ImageTool.Factories.ComponentFactory;
 import com.kma.ImageTool.Factories.Decorator;
+import com.kma.ImageTool.Model.settings.WorkingDirectoryPath;
 import com.kma.ImageTool.ViewComponents.MetroPanel;
 import com.kma.ImageTool.ViewComponents.MetroTextView;
 import com.kma.ImageTool.ViewComponents.MyButton;
@@ -61,9 +62,22 @@ public class MainArea extends MetroPanel {
 		lblInfo.setBounds(127, 186, 320, 21);
 		add(lblInfo);
 
+        restoreSettings();
+
 	}
 
-	public void addListener(ActionListener l) {
+    private void restoreSettings() {
+        final WorkingDirectoryPath workingDirectoryPath = WorkingDirectoryPath.getFromTmp();
+        if (workingDirectoryPath != null)
+            textField.setText(workingDirectoryPath.getPath());
+    }
+
+    public void savePathToImageFolder(String pathToImageFolder) {
+        new WorkingDirectoryPath(pathToImageFolder).serializa();
+    }
+
+
+    public void addListener(ActionListener l) {
 		textField.addActionListener(l);
 		btnExit.addActionListener(l);
 		btnRun.addActionListener(l);

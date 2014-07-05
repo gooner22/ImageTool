@@ -16,6 +16,12 @@ public class StrategyChooser implements INamingStrategy{
             return new GeneralNamingStrategy();
         }else if(regex.equals(Constants.REGEX_BCD)){
             return new BCDNamingStrategy();
+        }else if(regex.equals(Constants.REGEX_SGM)){
+            return new SGMNamingStrategy();
+        }else if(regex.equals(Constants.REGEX_BJB)){
+            return new BJBNamingStrategy();
+        }else if (regex.equals(Constants.REGEX_BIO)){
+            return new BIONamingStrategy();
         }
         return new GeneralNamingStrategy();
     }

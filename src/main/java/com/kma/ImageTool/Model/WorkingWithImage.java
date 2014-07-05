@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
+import com.kma.ImageTool.Error.InvalidImageFileNameException;
+import com.kma.ImageTool.Model.naming.FileNamingConvention;
 import org.im4java.core.*;
 import org.im4java.process.ProcessStarter;
 
@@ -24,7 +26,7 @@ public class WorkingWithImage {
 		pathToEditedFolder = "";
 	}
 
-	public boolean run(Set<String> images, String pathToLib, String pathToFolder) {
+	public boolean run(Set<String> images, String pathToLib, String pathToFolder) throws InvalidImageFileNameException {
 		// set path to folders that we will use
 		this.pathToFolder = pathToFolder;
 		this.pathToIMLibrary = pathToLib;
@@ -95,6 +97,7 @@ public class WorkingWithImage {
 				int heightOfTheImageInPx = 0;
 				int resolution = 0;
 				String nameOfImage = "";
+				String nameOfThumbnailImage = "";
 
 				try {
 					info = new Info(imagePath);
@@ -110,12 +113,18 @@ public class WorkingWithImage {
 					}
 
 					if (imageParameters.getNewName().equals("")) {
-						nameOfImage = imagePath.substring(directory
+						String original = imagePath.substring(directory
 								.getAbsolutePath().length() + 1, imagePath
 								.length());
-						nameOfImage = nameOfImage.substring(0,
-								nameOfImage.indexOf(formatOfImage) - 1);
+                        original = original.substring(0,
+                                original.indexOf(formatOfImage) - 1);
+						System.out.println("Original image: " + original);
+
+                        nameOfImage = FileNamingConvention.getOutputFileName(original);
 						System.out.println("Name of image: " + nameOfImage);
+
+                        nameOfThumbnailImage = FileNamingConvention.getOutputThumbnailFileName(original);
+                        System.out.println("Name of th image: " + nameOfImage);
 					}
 
 					if (format.equals("none")) {
@@ -459,7 +468,7 @@ public class WorkingWithImage {
 							if (imageParameters.getNewName().equals("")) {
                                 // thumbnails should be in separate folder
 								opForThumbnail.addImage(pathToEditedFolder
-                                        + File.separator + THUMBNAILS_FOLDER + nameOfImage + "th" + "."
+                                        + File.separator + THUMBNAILS_FOLDER + nameOfThumbnailImage + "."
                                         + format);
 							} else {
 								// check for iterator value and change zeroes

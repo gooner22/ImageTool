@@ -1,6 +1,6 @@
 package com.kma.ImageTool.Panels;
 
-import java.awt.Component;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class ManualPanel extends MetroPanel implements ActionListener {
 
 	public ManualPanel() {
 		setBackground(Config.bColor);
-		setSize(628, 216);
+		setSize(628, 120);
 		setLayout(null);
 
 		int dt = 40;
