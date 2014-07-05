@@ -12,3 +12,17 @@
 
 5. After that that keep calm and relax ImageTool will do for you the rest of work.
 
+
+*How to rename files properly
+
+By default files are not renamed
+
+If you want to rename file - tik option in the UI: Rename -> Rename with format
+
+By default files will be renamed by built-in logic, which satisfies almost all cases.
+If you want, you can put your own format, which consumes one parameter -> number of file.
+
+E.g:
+myFormat%d -> myFormat1, myFormat2 ..
+myFormat%03d -> myFormat001, myFormat002 ..
+myFormat%03d.lo -> myFormat001.lo ..
