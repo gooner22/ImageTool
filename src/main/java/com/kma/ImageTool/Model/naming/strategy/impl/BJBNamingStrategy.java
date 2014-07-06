@@ -21,4 +21,9 @@ public class BJBNamingStrategy implements INamingStrategy {
     public String getThumbnailFileName(MatcherWrapper mw) {
         return String.format("%s%s",getFileName(mw), Constants.THUMBNAIL_SUFFIX);
     }
+
+    @Override
+    public int getNumberOfFile(MatcherWrapper mw) {
+        return Integer.valueOf(mw.getMatcher().group(3));
+    }
 }

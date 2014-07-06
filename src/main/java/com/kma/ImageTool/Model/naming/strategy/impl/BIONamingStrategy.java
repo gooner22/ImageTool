@@ -22,4 +22,8 @@ public class BIONamingStrategy implements INamingStrategy {
         return String.format("%s%s",getFileName(mw), Constants.THUMBNAIL_SUFFIX);
     }
 
+    @Override
+    public int getNumberOfFile(MatcherWrapper mw) {
+        return Integer.valueOf(mw.getMatcher().group(3));
+    }
 }

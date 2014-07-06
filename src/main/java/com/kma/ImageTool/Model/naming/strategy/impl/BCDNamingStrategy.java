@@ -22,4 +22,9 @@ public class BCDNamingStrategy implements INamingStrategy {
         final Matcher m = mw.getMatcher();
         return String.format("%s%s%s%03d", m.group(1), Constants.SPECIAL_SYMBOL_SEPARATOR_UNDERSCORE, Constants.SYMBOLIC_SEPARATOR_FTH, Integer.valueOf(m.group(3)));
     }
+
+    @Override
+    public int getNumberOfFile(MatcherWrapper mw) {
+        return Integer.valueOf(mw.getMatcher().group(3));
+    }
 }

@@ -32,6 +32,15 @@ public class FileNamingConvention {
         return strategyChooser.getThumbnailFileName(getMatcher(sourceFileName));
     }
 
+    public static int getOutputNumberOfFile(final String sourceFileName) {
+        try {
+            return strategyChooser.getNumberOfFile(getMatcher(sourceFileName));
+        } catch (InvalidImageFileNameException e) {
+            System.out.println("Can not find strategy for file named: " + sourceFileName);
+            return -1;
+        }
+    }
+
     private static MatcherWrapper getMatcher(String sourceFileName) throws InvalidImageFileNameException {
 
         if(sourceFileName == null ||
@@ -40,7 +49,7 @@ public class FileNamingConvention {
 
 
          // try to find corresponding regex
-        for (String regex : POSSIBLE_REGEXS){
+            for (String regex : POSSIBLE_REGEXS){
             Matcher m = Pattern.compile(regex).matcher(sourceFileName);
             if (m.matches()){
                 return new MatcherWrapper(m, regex);

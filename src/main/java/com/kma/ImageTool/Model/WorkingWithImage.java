@@ -125,13 +125,12 @@ public class WorkingWithImage {
                                 imageParameters.getRenamingFormatThumbnail() == null)
                             throw new IllegalArgumentException("renaming format is not set");
 
+                        int numberOfResource = FileNamingConvention.getOutputNumberOfFile(original);
                         if (imageParameters.getRenamingFormat().isEmpty()){
                             // use built-in regex definition and predefined rules to rename files
                             nameOfImage = FileNamingConvention.getOutputFileName(original);
                         } else{
                             // use provided pattern
-                            // TODO mhontar: get number of item
-                            int numberOfResource = 1;
                             nameOfImage = String.format(imageParameters.getRenamingFormat(), numberOfResource > 0 ? numberOfResource : iterator);
                         }
                         if (imageParameters.getRenamingFormatThumbnail().isEmpty()){
@@ -139,8 +138,6 @@ public class WorkingWithImage {
                             nameOfThumbnailImage = FileNamingConvention.getOutputThumbnailFileName(original);
                         } else{
                             // use provided pattern
-                            // TODO mhontar: get number of item
-                            int numberOfResource = 1;
                             nameOfThumbnailImage = String.format(imageParameters.getRenamingFormatThumbnail(), numberOfResource > 0 ? numberOfResource : iterator);
                         }
                     }else {

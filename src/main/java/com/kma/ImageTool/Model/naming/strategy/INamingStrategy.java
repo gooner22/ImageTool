@@ -9,4 +9,5 @@ import com.kma.ImageTool.Model.naming.MatcherWrapper;
 public interface INamingStrategy {
     public String getFileName(MatcherWrapper mw);
     public String getThumbnailFileName(MatcherWrapper mw);
+    public int getNumberOfFile(MatcherWrapper mw);
 }

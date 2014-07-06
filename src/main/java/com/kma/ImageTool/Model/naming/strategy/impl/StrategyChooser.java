@@ -35,4 +35,9 @@ public class StrategyChooser implements INamingStrategy{
     public String getThumbnailFileName(MatcherWrapper mw) {
         return chooseStrategy(mw).getThumbnailFileName(mw);
     }
+
+    @Override
+    public int getNumberOfFile(MatcherWrapper mw) {
+        return chooseStrategy(mw).getNumberOfFile(mw);
+    }
 }
