@@ -1,5 +1,6 @@
 package com.kma.ImageTool.Model.settings;
 
+import java.io.File;
 import java.io.Serializable;
 
 /**
@@ -7,7 +8,7 @@ import java.io.Serializable;
  * Created by mhontar on 09.07.14.
  */
 public class WorkingConfigFile implements Serializable {
-    public static final String PATH = TmpFileUtils.TMP_WORKING_DIR_PATH + "workingConfigFile.ser";
+    public static final String PATH = TmpFileUtils.TMP_WORKING_DIR_PATH + File.separator + "workingConfigFile.ser";
 
     final String templateName;
 

@@ -11,7 +11,7 @@ import java.util.logging.Level;
  */
 public class TmpFileUtils {
     // TODO: replace with relative path
-    public static final String TMP_WORKING_DIR_PATH = "/tmp/";
+    public static final String TMP_WORKING_DIR_PATH = "/tmp";
 
     public static void serializeObjectAtPath(String path, Serializable obj) {
         try
