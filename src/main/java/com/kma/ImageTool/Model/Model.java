@@ -6,6 +6,7 @@ import com.kma.ImageTool.Error.InvalidImageFileNameException;
 import com.kma.ImageTool.Error.NotExistingXMLError;
 
 import java.io.*;
+import java.net.URLDecoder;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -204,7 +205,14 @@ public enum Model {
 			while ((sCurrentLine = br.readLine()) != null) {
 				break;
 			}
-			pathToImageMagic = sCurrentLine;
+
+
+			//pathToImageMagic = sCurrentLine;
+
+            // relative path to sewn lib
+            //pathToImageMagic = URLDecoder.decode(new File("").getAbsolutePath(), "UTF-8") + sCurrentLine;
+
+            pathToImageMagic = URLDecoder.decode(new File("").getAbsolutePath(), "UTF-8") + "/imagelibs/imagemagick/6.8.9-1";
 
 
 		} catch (IOException e) {

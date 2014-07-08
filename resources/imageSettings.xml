@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited by mintCar -->
+<IMAGES_FOR_EDIT>
+
+
+<CHANGE_FORMAT_TO>gif</CHANGE_FORMAT_TO><!-- If this field exists than image format would be changed for this. RESTRICTION: File format should be written without quotes and without previous dot. All possible formt extensions: gif, png, tiff, tif, jpg, crw, cr2, dcr, sr2, srf, ico, icon,jpeg, erf E.g.: <CHANGE_FORMAT_TO>png</CHANGE_FORMAT_TO> -->
+
+
+<CHANGE_SIZE></CHANGE_SIZE><!-- If this field exists than image size of
+width or height would be changed for this value. E.g.: for width
+<CH..TO>500x</CH..TO> or <CH..TO>500</CH..TO> or for height
+<CH..TO>x500</CH..TO> Could be both: <CH..TO>500x1000</CH..TO> Could be
+in percentage: E.g.: <CH..TO>50%</CH..TO> You will get the image changed 
+by a given percentage 
+(Should be from 1 to 100).-->
+<CHANGE_RESOLUTION_TO></CHANGE_RESOLUTION_TO><!-- If this field exists
+than image resolution would be changed for this. RESTRICTION: Numbers
+ should be more than 0. E.g.:
+<CHANGE_RESOLUTION_TO>1080</CHANGE_RESOLUTION_TO> -->
+<CHANGE_TO_MONO>1</CHANGE_TO_MONO><!-- If this field exists, it contains
+the true value and the original image is in colour than image would be
+changed for mono type. RESTRICTION: This field can have only two values:
+0 or 1. If any other value would be here no changes would be done. -->
+<FLATTENING_IMAGE>0</FLATTENING_IMAGE><!-- If this field exists and it
+containts the true value than image would be flattened. RESTRICTION: This
+field can have only two values: 0 or 1. If any other value would be here
+no changes would be done. -->
+<QUALITY_COMPRESSION_FOR_JPEG_IMAGES></QUALITY_COMPRESSION_FOR_JPEG_IMAGES><!--
+If this field exists and it containts the value and image has a jpg,jpeg
+or tif,tiff extensions than image would be compressed. RESTRICTION: This
+field can have only values from 1 to 100. If any other value would be
+here no changes would be done. -->
+</IMAGES_FOR_EDIT>

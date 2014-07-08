@@ -1,2 +1,4 @@
 Manifest-Version: 1.0
+Class-Path: img4java-1.4.0.jar
 Main-Class: com.kma.ImageTool.Main
+

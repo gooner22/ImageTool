@@ -33,7 +33,9 @@ public class WorkingWithImage {
 
 		directory = new File(pathToFolder, "");
 
-		if (images.size() > 0) {
+        System.out.println("in run method");
+
+        if (images.size() > 0) {
 
 			String zeroesBefore = zeroesString(numbersOfNumber(images.size()));
 			int iterator = 1;
@@ -50,12 +52,12 @@ public class WorkingWithImage {
 				IMOperation op = new IMOperation();
 
 				String mrjVersion = System.getProperty("mrj.version");
-				boolean isMacOs = mrjVersion != null;
+				boolean isMacOs = mrjVersion != null || System.getProperty("os.name").equals("Mac OS X");
 				if (isMacOs) {
-					ProcessStarter.setGlobalSearchPath(pathToIMLibrary
+                    ProcessStarter.setGlobalSearchPath(pathToIMLibrary
 							+ "/bin:" + pathToIMLibrary + "/lib");
 				} else {
-					String imPath = pathToIMLibrary;
+					String imPath = pathToIMLibrary + "/bin;" + pathToIMLibrary + "/lib";
 					cmd.setSearchPath(imPath);
 				}
 				op.addImage(imagePath);
@@ -75,7 +77,7 @@ public class WorkingWithImage {
 						ProcessStarter.setGlobalSearchPath(pathToIMLibrary
 								+ "/bin:" + pathToIMLibrary + "/lib");
 					} else {
-						String imPath = pathToIMLibrary;
+						String imPath = pathToIMLibrary + "/bin;" + pathToIMLibrary + "/lib";
 
 						if (cmdForThumbnail != null && opForThumbnail != null)
 							cmdForThumbnail.setSearchPath(imPath);
@@ -99,8 +101,8 @@ public class WorkingWithImage {
 				String nameOfImage = "";
 				String nameOfThumbnailImage = "";
 
-				try {
-					info = new Info(imagePath);
+                try {
+					info = new Info(imagePath); // vector, need dpi - use! size
 
 					String formatOfImage = info
 							.getImageFormat()
@@ -111,6 +113,14 @@ public class WorkingWithImage {
 					if (formatOfImage.equals("jpeg")) {
 						formatOfImage = "jpg";
 					}
+
+                    if(formatOfImage.equals("ept")) {
+                        formatOfImage = "eps";
+                    }
+
+                    if(formatOfImage.contains("tif")) {
+                        formatOfImage = "tif";
+                    }
 
                     // getting original image name
                     String original = imagePath.substring(directory
@@ -149,7 +159,16 @@ public class WorkingWithImage {
                     System.out.println("Name of th image: " + nameOfThumbnailImage);
 
 
-                    if (format.equals("none")) {
+                    if (imageParameters.getNewName().equals("")) {
+                        nameOfImage = imagePath.substring(directory
+                                .getAbsolutePath().length() + 1, imagePath
+                                .length());
+                        nameOfImage = nameOfImage.substring(0,
+                                nameOfImage.indexOf(formatOfImage) - 1);
+                        System.out.println("Name of image: " + nameOfImage);
+                    }
+
+					if (format.equals("none")) {
 						format = formatOfImage;
 					}
 
@@ -178,7 +197,9 @@ public class WorkingWithImage {
 					}
 
 				} catch (InfoException e2) {
-					return false;
+                    System.out.println("InfoException");
+                    System.out.println(e2);
+                    return false;
 				}
 
 				// Changing resolution
@@ -575,7 +596,7 @@ public class WorkingWithImage {
 	 */
 	private int getRatioSize(int numerator1, int denominator1, int numerator2) {
 
-		return (denominator1 * numerator2) / numerator1;
+		return 10000; //TODO remake it //(denominator1 * numerator2) / numerator1;
 	}
 
 	/**
