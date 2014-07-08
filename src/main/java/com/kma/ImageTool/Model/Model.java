@@ -23,6 +23,7 @@ public enum Model {
 	GET;
 	private String pathToImageMagic = "";
 	private String pathToFolderWorkingWith = "";
+	private String templateFileName = "";
 	private ImageParameterFetch imageFetch;
 
 	/**
@@ -105,7 +106,7 @@ public enum Model {
 		// TODO Auto-generated method stub
 		if (!pathToFolderWorkingWith.equals("")) {
 			
-			String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
+			String path = pathToFolderWorkingWith + File.separator + getTemplateFileName();
 			File f = new File(path);
 			if (f.exists()) {
                 LoggerUtils.getLogger().info("delete file: " + path);
@@ -143,7 +144,7 @@ public enum Model {
 	 * @return true if exists false if not
 	 */
 	public boolean isExistsXML() {
-		String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
+		String path = pathToFolderWorkingWith + File.separator + getTemplateFileName();
 
 		if (new File(path).exists()) {
 			return true;
@@ -171,10 +172,10 @@ public enum Model {
 	 * @return file that holds your XML
 	 * @throws NotExistingXMLError
 	 *             if not exists XML file
-	 */
+     */
 	public File getXmlFile() throws NotExistingXMLError {
 		if (isExistsXML()) {
-			String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
+			String path = pathToFolderWorkingWith + File.separator + getTemplateFileName();
 			return new File(path);
 		} else
 			throw new NotExistingXMLError();
@@ -273,4 +274,11 @@ public enum Model {
 		}
 	};
 
+    public void doSetPathForTemplateName(String templateName) {
+        this.templateFileName = templateName;
+    }
+
+    public String getTemplateFileName() {
+        return templateFileName;
+    }
 }

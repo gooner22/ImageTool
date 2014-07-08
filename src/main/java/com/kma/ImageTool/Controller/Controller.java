@@ -5,7 +5,6 @@ import com.kma.ImageTool.DataStrategy.HoldDataStrategy;
 import com.kma.ImageTool.DataStrategy.Strategy;
 import com.kma.ImageTool.Error.NotExistingXMLError;
 import com.kma.ImageTool.Log.LoggerUtils;
-import com.kma.ImageTool.Model.ImageParameterFetch;
 import com.kma.ImageTool.Model.Model;
 import com.kma.ImageTool.View.*;
 import com.kma.ImageTool.ViewComponents.MetroTextView;
@@ -24,7 +23,8 @@ import java.io.File;
  */
 public class Controller {
 
-	private MainContainer frame;
+    public static final String DEF_TEMPLATE_NAME = "imageSettings.xml";
+    private MainContainer frame;
 	private Model model;
 	private MainImageMagic imageMagicPanel;
 	private Debug log = Debug.GET;
@@ -130,15 +130,25 @@ public class Controller {
 			if (source == mainArea.getBtnRun()) {
                 final String pathToImageFolder = mainArea.getTextField().getText();
                 if (checkPath(pathToImageFolder)) {
-					// set path to image folder
-					invokeEditor();
 
-                    mainArea.savePathToImageFolder(pathToImageFolder);
+                    final String templateName = mainArea.getTemplateName().getText();
+                    if (templateName.equals("") ||
+                            checkFile(pathToImageFolder, templateName)) {
+
+                        // set path to image folder
+    					invokeEditor(templateName.equals("") ? DEF_TEMPLATE_NAME : templateName);
+
+                        mainArea.savePathToImageFolder(pathToImageFolder);
+                        mainArea.saveTemplateName(templateName);
+                    }else{
+                        InfoBox.BOX.info(mainArea, "Please use existing template or leave blank.");
+                    }
+
 				} else {
 					InfoBox.BOX.info(mainArea, "Please choose path first");
 				}
 
-			}
+            }
 
 		}// end ACtionPerformed
 			// END of MainAreaListener
@@ -197,13 +207,15 @@ public class Controller {
 	// /////////////// //////////////////////
 	/**
 	 * Invoke XML editor is xml already exists fetch all info
-	 */
-	private void invokeEditor() {
+     * @param templateName
+     */
+	private void invokeEditor(String templateName) {
 		frame.setEnabled(false);
 		initEditor();
 		// set path to image folder
 		Model.GET.doSetPathToFolderWorkingWith(mainArea.getTextField()
 				.getText());
+        Model.GET.doSetPathForTemplateName(templateName);
 		// wrapper.clean();
 		initDataInEditor();
 	}
@@ -408,7 +420,7 @@ public class Controller {
 	/**
 	 * 
 	 * @return true if xmlfile exit and fill all fields right
-	 */
+     */
 	private boolean initDataInEditor() {
 		if (Model.GET.isExistsXML()) {
 			try {
@@ -460,4 +472,8 @@ public class Controller {
 		}
 		return true;
 	}
+
+    private boolean checkFile(String path, String file){
+        return new File(path + File.separator + file).exists();
+    }
 }

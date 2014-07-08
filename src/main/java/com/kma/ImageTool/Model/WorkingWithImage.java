@@ -157,19 +157,10 @@ public class WorkingWithImage {
                         nameOfImage = original;
                         nameOfThumbnailImage = original + "th";
                     }
-                    // TODO mhontar: check regex renaming
+
                     LoggerUtils.getLogger().info("Name of image: " + nameOfImage);
                     LoggerUtils.getLogger().info("Name of th image: " + nameOfThumbnailImage);
 
-
-                    if (imageParameters.getNewName().equals("")) {
-                        nameOfImage = imagePath.substring(directory
-                                .getAbsolutePath().length() + 1, imagePath
-                                .length());
-                        nameOfImage = nameOfImage.substring(0,
-                                nameOfImage.indexOf(formatOfImage) - 1);
-                        System.out.println("Name of image: " + nameOfImage);
-                    }
 
 					if (format.equals("none")) {
 						format = formatOfImage;

@@ -33,7 +33,6 @@ public class ParseXML {
 
 			DefaultHandler handler = new DefaultHandler() {
 
-                private boolean templateName = false;
 				private boolean shouldRename = false;
 				private boolean renameFormat = false;
 				private boolean renameFormatTh = false;
@@ -67,11 +66,6 @@ public class ParseXML {
 				public void startElement(String uri, String localName,
 						String qName, Attributes attributes)
 						throws SAXException {
-
-
-                    if (qName.equalsIgnoreCase(XmlKeys.TEMPLATE_NAME)) {
-                        templateName = true;
-                    }
 
 					if (!qName.equalsIgnoreCase("IMAGES_TO_EDIT")) {
 					}
@@ -366,15 +360,6 @@ public class ParseXML {
 
 				public void characters(char ch[], int start, int length)
 						throws SAXException {
-
-                    if (templateName) {
-                        String newName = new String(ch, start, length);
-                        if (checkForCharInString(newName, length)) {
-                            imageWorkingWith.setTemplateName(newName);
-
-                        }
-                        templateName = false;
-                    }
 
 					if (parameterForChangeSizeOfHeightIfLess) {
 						String parameter = new String(ch, start, length);

@@ -48,8 +48,6 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
     private JLabel renamingThumnailFormatTxtHelp;
     private JLabel imageInfoLbl;
     private JLabel imageThumbnailInfoLbl;
-    private MetroTextView txtName;
-
 
     public XmlWrapper() {
 		setSize(Config.WIDTH_EDITOR, Config.HEIGHT_EDITOR);
@@ -183,28 +181,7 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		add(lblCompression);
 
         addNamingItems();
-        addTemplateItem();
 	}
-
-    private void addTemplateItem() {
-        final int yOffset = 10;
-        final int xOffset = 230;
-
-        JLabel lblTemplateName = new JLabel("Template name");
-        lblTemplateName.setBounds(xOffset+10, yOffset, 120, 18);
-        Decorator.decorateNormal(lblTemplateName);
-        add(lblTemplateName);
-
-        txtName = ComponentFactory.GET.getTextViewForName();
-        txtName.setLocation(xOffset+130, yOffset);
-        add(txtName);
-
-        JLabel lbldefault = new JLabel("for default name - leave blank");
-        lbldefault.setBounds(xOffset+235, yOffset, 200, 25);
-        Decorator.decorateInfo(lbldefault);
-        add(lbldefault);
-
-    }
 
     private void addNamingItems() {
         final String kRename = "Rename";
@@ -431,10 +408,6 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 	// ///////////////////////////////
 
 
-    public MetroTextView getTxtName() {
-        return txtName;
-    }
-
     public MyButton getBtnCancel() {
 		return btnCancel;
 	}
@@ -548,10 +521,6 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		if (imageWorkingWith.getResolutionDPI() > 0) {
 			txtDPI.setText(Integer.toString(imageWorkingWith.getResolutionDPI()));
 		}
-
-        if (!imageWorkingWith.getTemplateName().equals("")) {
-            txtName.setText(imageWorkingWith.getTemplateName());
-        }
 
 		if (imageWorkingWith.isFlatteningImage()) {
 			chckbxFlattening.setSelected(imageWorkingWith.isFlatteningImage());
