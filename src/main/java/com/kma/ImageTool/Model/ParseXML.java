@@ -2,6 +2,7 @@ package com.kma.ImageTool.Model;
 
 import com.kma.ImageTool.DTO.ImageParametrs;
 import com.kma.ImageTool.DataStrategy.XmlKeys;
+import com.kma.ImageTool.Log.LoggerUtils;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -10,6 +11,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
+import java.util.logging.Level;
 
 /**
  * Class that fetching parameters from XML File old one that is why don't use
@@ -23,7 +25,7 @@ public class ParseXML {
 	private boolean haveAnError = false;
 	private ImageParameterFetch imageWorkingWith = new ImageParameterFetch();
 
-	public ImageParameterFetch parseFile(File xml) {
+    public ImageParameterFetch parseFile(File xml) {
 
 		try {
 			SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -31,6 +33,7 @@ public class ParseXML {
 
 			DefaultHandler handler = new DefaultHandler() {
 
+                private boolean templateName = false;
 				private boolean shouldRename = false;
 				private boolean renameFormat = false;
 				private boolean renameFormatTh = false;
@@ -65,7 +68,10 @@ public class ParseXML {
 						String qName, Attributes attributes)
 						throws SAXException {
 
-					
+
+                    if (qName.equalsIgnoreCase(XmlKeys.TEMPLATE_NAME)) {
+                        templateName = true;
+                    }
 
 					if (!qName.equalsIgnoreCase("IMAGES_TO_EDIT")) {
 					}
@@ -360,6 +366,15 @@ public class ParseXML {
 
 				public void characters(char ch[], int start, int length)
 						throws SAXException {
+
+                    if (templateName) {
+                        String newName = new String(ch, start, length);
+                        if (checkForCharInString(newName, length)) {
+                            imageWorkingWith.setTemplateName(newName);
+
+                        }
+                        templateName = false;
+                    }
 
 					if (parameterForChangeSizeOfHeightIfLess) {
 						String parameter = new String(ch, start, length);
@@ -1285,7 +1300,7 @@ public class ParseXML {
 			saxParser.parse(source, handler);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+            LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
 		}
 		return imageWorkingWith;
 

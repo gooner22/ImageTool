@@ -2,15 +2,16 @@ package com.kma.ImageTool.DataStrategy;
 
 import com.kma.ImageTool.DTO.ImageParametrs;
 
-import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE;
-import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE_FORMAT;
-import static com.kma.ImageTool.DataStrategy.XmlKeys.RENAME_IMAGE_TH_FORMAT;
+import static com.kma.ImageTool.DataStrategy.XmlKeys.*;
 
 public class StringXml {
 
 
     private final String HEADER = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
 			+ "<!-- Edited by mintCar -->\n<IMAGES_FOR_EDIT>\n\n";
+
+	private final String OPEN_TEMPLATE_NAME = "<" + TEMPLATE_NAME + ">";
+	private final String CLOSE_TEMPLATE_NAME = "</" + TEMPLATE_NAME + "><!-- use to set custom template name to use; default is imageSettings.xml -->";
 
 	private final String OPEN_RENAME_IMAGE = "<" + RENAME_IMAGE + ">";
 	private final String CLOSE_RENAME_IMAGE = "</" + RENAME_IMAGE + "><!-- If his field is 1 - then renaming rule will be applied to image files. -->\n";

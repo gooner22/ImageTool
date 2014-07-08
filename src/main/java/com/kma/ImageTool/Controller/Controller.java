@@ -1,26 +1,20 @@
 package com.kma.ImageTool.Controller;
 
-import java.awt.Desktop;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-
-import javax.swing.JFileChooser;
-import javax.swing.SwingWorker;
-
 import com.kma.ImageTool.DTO.ImageParametrs;
 import com.kma.ImageTool.DataStrategy.HoldDataStrategy;
 import com.kma.ImageTool.DataStrategy.Strategy;
-import com.kma.ImageTool.Error.InvalidImageFileNameException;
 import com.kma.ImageTool.Error.NotExistingXMLError;
+import com.kma.ImageTool.Log.LoggerUtils;
+import com.kma.ImageTool.Model.ImageParameterFetch;
 import com.kma.ImageTool.Model.Model;
-import com.kma.ImageTool.Model.settings.WorkingDirectoryPath;
-import com.kma.ImageTool.View.MainArea;
-import com.kma.ImageTool.View.MainContainer;
-import com.kma.ImageTool.View.MainImageMagic;
-import com.kma.ImageTool.View.XmlEditor;
-import com.kma.ImageTool.View.XmlWrapper;
+import com.kma.ImageTool.View.*;
 import com.kma.ImageTool.ViewComponents.MetroTextView;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
 
 /**
  * com.kma.ImageTool.Model com.kma.ImageTool.View com.kma.ImageTool.Controller. Controll all relationship between frames and panels of
@@ -422,7 +416,7 @@ public class Controller {
 						.getImageFetch(Model.GET.getXmlFile()));
 				return true;
 			} catch (NotExistingXMLError e) {
-				System.out.println("Didnt find XML file");
+				LoggerUtils.getLogger().severe("Didnt find XML file");
 				return false;
 			}
 

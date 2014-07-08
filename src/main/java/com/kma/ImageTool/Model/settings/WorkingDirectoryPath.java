@@ -1,6 +1,9 @@
 package com.kma.ImageTool.Model.settings;
 
+import com.kma.ImageTool.Log.LoggerUtils;
+
 import java.io.*;
+import java.util.logging.Level;
 
 /**
  * Social Glutton (c) 2014
@@ -28,10 +31,10 @@ public class WorkingDirectoryPath implements Serializable {
             out.writeObject(this);
             out.close();
             fileOut.close();
-            System.out.println("WorkingDirectoryPath saved into: " + TMP_WORKING_DIR_PATH_SER);
+            LoggerUtils.getLogger().info("WorkingDirectoryPath saved into: " + TMP_WORKING_DIR_PATH_SER);
         }catch(IOException i)
         {
-            i.printStackTrace();
+            LoggerUtils.getLogger().log(Level.SEVERE, "error", i);
         }
     }
 
@@ -47,11 +50,11 @@ public class WorkingDirectoryPath implements Serializable {
             fileIn.close();
         }catch(IOException i)
         {
-            System.out.println("Settings file doesn't exist: " + TMP_WORKING_DIR_PATH_SER);
+            LoggerUtils.getLogger().severe("Settings file doesn't exist: " + TMP_WORKING_DIR_PATH_SER);
         }catch(ClassNotFoundException c)
         {
-            System.out.println("WorkingDirectoryPath class not found");
-            c.printStackTrace();
+            LoggerUtils.getLogger().log(Level.SEVERE, "WorkingDirectoryPath class not found", c);
+            LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
         }
         return e;
     }

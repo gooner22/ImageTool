@@ -2,10 +2,13 @@
   <artifact type="jar" name="ImageTool">
     <output-path>$PROJECT_DIR$/out/artifacts/ImageTool</output-path>
     <root id="archive" name="ImageTool.jar">
+      <element id="module-output" name="RefactoringKursova" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
-      <element id="module-output" name="RefactoringKursova" />
+      <element id="directory" name="libs">
+        <element id="dir-copy" path="$PROJECT_DIR$/libs" />
+      </element>
     </root>
   </artifact>
 </component>

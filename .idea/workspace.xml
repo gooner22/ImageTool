@@ -7,51 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3eed6cd-9485-444c-b1ab-659e4ed98439" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/View/XmlEditor.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/View/XmlEditor.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Controller/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Controller/Debug.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Controller/Debug.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Controller/InfoBox.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Controller/InfoBox.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/HColorModel.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/HColorModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/HExtended.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/HExtended.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/HManualSize.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/HManualSize.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/HNameDpi.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/HNameDpi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/HThumbnail.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/HThumbnail.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/HandleManager.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/HandleManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/Handler.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/Handler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DTO/ImageParametrs.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DTO/ImageParametrs.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStrategy/HoldDataStrategy.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DataStrategy/HoldDataStrategy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStrategy/Strategy.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DataStrategy/Strategy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataStrategy/StringXml.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/DataStrategy/StringXml.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Error/NotExistingXMLError.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Error/NotExistingXMLError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Factories/ButtonFactory.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Factories/ButtonFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Factories/ComponentFactory.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Factories/ComponentFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Factories/Decorator.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Factories/Decorator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/Main.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/ConfigFile.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Model/ConfigFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/ImageParameterFetch.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Model/ImageParameterFetch.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/Model.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Model/Model.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/ParseXML.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Model/ParseXML.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/WorkingWithImage.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/ExtendedPanel.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/ExtendedPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/HalfManual.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/HalfManual.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/ManualPanel.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/ManualPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/PanelBetween.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/PanelBetween.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/PanelLessMore.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/PanelLessMore.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/PerCent.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/PerCent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Panels/Thumbnails.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/Panels/Thumbnails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/View/Config.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/View/Config.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/View/MainArea.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/View/MainArea.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/View/MainContainer.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/View/MainContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/View/MainImageMagic.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/View/MainImageMagic.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/View/XmlWrapper.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/View/XmlWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ViewComponents/ConfigGUICLient.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/ViewComponents/ConfigGUICLient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ViewComponents/MetroPanel.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/ViewComponents/MetroPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ViewComponents/MetroScrollBar.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/ViewComponents/MetroScrollBar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ViewComponents/MetroTextView.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/ViewComponents/MetroTextView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ViewComponents/MetroTextViewOnlyNumbers.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/ViewComponents/MetroTextViewOnlyNumbers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ViewComponents/MyButton.java" afterPath="$PROJECT_DIR$/src/com/kma/ImageTool/ViewComponents/MyButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Log/LoggerUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jgoodies_jgoodies_common_1_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jgoodies_jgoodies_forms_1_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_im4java_im4java_1_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/forms_1_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/im4java_1_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Debug.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Debug.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/FileNamingConvention.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/FileNamingConvention.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HRenameConvention.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HRenameConvention.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ImageParameterFetch.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ImageParameterFetch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/ImageParametrs.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/ImageParametrs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ImageTool.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ImageTool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ParseXML.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ParseXML.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/StringXml.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/StringXml.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/settings/WorkingDirectoryPath.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/settings/WorkingDirectoryPath.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/XmlKeys.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/XmlKeys.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/XmlWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/XmlWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.txt" afterPath="$PROJECT_DIR$/settings.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RefactoringKursova.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,87 +54,154 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DebuggerManager">
+    <breakpoint_any converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="RefactoringKursova" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="XmlWrapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/XmlWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="210" max-vertical-offset="300">
-              <caret line="14" column="61" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="12555">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="e#13253#13254#0" expanded="true" />
+                <element signature="e#13283#13284#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseXML.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ParseXML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3846154" vertical-offset="5223" max-vertical-offset="19545">
+              <caret line="372" column="61" selection-start-line="372" selection-start-column="61" selection-end-line="372" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Main.java">
+      <file leaf-file-name="HoldDataStrategy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/HoldDataStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="16" column="211" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkingWithImage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java">
+      <file leaf-file-name="HRenameConvention.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HRenameConvention.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5070" max-vertical-offset="9750">
-              <caret line="347" column="16" selection-start-line="346" selection-start-column="0" selection-end-line="347" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/Model.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3975">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2259" max-vertical-offset="3855">
+              <caret line="173" column="23" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.txt">
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5754" max-vertical-offset="6825">
+              <caret line="411" column="20" selection-start-line="411" selection-start-column="20" selection-end-line="411" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Controller/Controller.java">
+      <file leaf-file-name="WorkingDirectoryPath.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/settings/WorkingDirectoryPath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65543073" vertical-offset="585" max-vertical-offset="6540">
-              <caret line="93" column="57" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.39800996" vertical-offset="0" max-vertical-offset="900">
+              <caret line="23" column="158" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainContainer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/View/MainContainer.java">
+      <file leaf-file-name="MainArea.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/MainArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-              <caret line="25" column="48" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="1455">
+              <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <file leaf-file-name="ImageParametrs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/ImageParametrs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-              <caret line="2" column="81" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="6420">
+              <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+              <folding>
+                <element signature="e#2804#2805#0" expanded="true" />
+                <element signature="e#2860#2861#0" expanded="true" />
+                <element signature="e#2908#2909#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XmlKeys.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/XmlKeys.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -164,23 +217,123 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../Avid/dev.ws.mhontar.iNEWS_Mobile_CI_android_avid_central/iNEWS/Mobile/android/AvidCentral" value="1393534705000" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/settings.txt" />
         <option value="$PROJECT_DIR$/src/Model/Model.java" />
         <option value="$PROJECT_DIR$/src/Model/WorkingWithImage.java" />
-        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/com/kma/ImageTool/Main.java" />
         <option value="$PROJECT_DIR$/src/com/kma/ImageTool/Model/Model.java" />
         <option value="$PROJECT_DIR$/src/com/kma/ImageTool/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/com/kma/ImageTool/Model/FileNamingConvention.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Error/InvalidImageFileNameException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/FileNamingConvention.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/MatcherWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/ExecuteStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/StrategyChoose.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/StrategyChooser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/CYEMNamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/JMMNamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/MainArea.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Panels/ExtendedPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Factories/Decorator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Panels/ManualPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/HoldDataStrategy.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/com/kma/ImageTool/Model/FileNamingConventionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HNameDpi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/BCDNamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/INamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/SGMNamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/GeneralNamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/BJBNamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/BIONamingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/StrategyChooser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/HintTextField.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Log/Logger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Debug.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/FileNamingConvention.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Log/LoggerUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/settings/WorkingDirectoryPath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/Model.java" />
+        <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java" />
+        <option value="$PROJECT_DIR$/settings.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/XmlWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ImageParameterFetch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ParseXML.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/XmlKeys.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/StringXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/ImageParametrs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HRenameConvention.java" />
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ImageTool" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ImageTool" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ImageTool" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="2560" />
-    <option name="height" value="1354" />
+    <option name="width" value="1920" />
+    <option name="height" value="1111" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -196,6 +349,12 @@
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="unused-library(library:project:forms-1.3.0)" />
+      <problem id="unused-library(library:project:im4java-1.4.0)" />
+    </ignored-problems>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -216,13 +375,13 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RefactoringKursova" />
+              <option name="myItemId" value="ImageTool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RefactoringKursova" />
+              <option name="myItemId" value="ImageTool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -232,7 +391,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RefactoringKursova" />
+              <option name="myItemId" value="ImageTool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -240,13 +399,13 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RefactoringKursova" />
+              <option name="myItemId" value="ImageTool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -254,7 +413,131 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTool" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStrategy" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,27 +546,46 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Avid/dev.ws.mhontar.Core/IPC/core/framework/gradle" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ImageToolAddOns" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="LayoutCode.rearrangeEntriesXML" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kma.ImageTool.Model" />
+    </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="com.kma.ImageTool.DataStrategy.XmlKeys" />
+      <recent name="com.kma.ImageTool.DataStrategy.StringXml" />
+      <recent name="com.kma.ImageTool.Model.naming.Constants" />
+      <recent name="com.kma.ImageTool.Model.FileNamingConvention" />
       <recent name="Model.WorkingWithImage" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kma.ImageTool.Model.naming.strategy.impl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/libs" />
     </key>
   </component>
@@ -296,16 +598,112 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.kma.ImageTool.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="RefactoringKursova" />
+      <module name="ImageTool" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileNamingConventionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.kma.ImageTool.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RefactoringKursova" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.kma.ImageTool.Model" />
+      <option name="MAIN_CLASS_NAME" value="com.kma.ImageTool.Model.FileNamingConventionTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileNamingConventionTest.testBIONameShouldMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.kma.ImageTool.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RefactoringKursova" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.kma.ImageTool.Model" />
+      <option name="MAIN_CLASS_NAME" value="com.kma.ImageTool.Model.FileNamingConventionTest" />
+      <option name="METHOD_NAME" value="testBIONameShouldMatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileNamingConventionTest.testEMIThumbnailNameShouldMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.kma.ImageTool.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RefactoringKursova" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.kma.ImageTool.Model" />
+      <option name="MAIN_CLASS_NAME" value="com.kma.ImageTool.Model.FileNamingConventionTest" />
+      <option name="METHOD_NAME" value="testEMIThumbnailNameShouldMatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
@@ -332,6 +730,28 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -341,9 +761,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -464,13 +881,6 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -539,12 +949,157 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+    <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.kma.ImageTool.Main" />
+      <option name="VM_PARAMETERS" value="-jar ImageTool.jar" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/out/artifacts/ImageTool/" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ImageTool" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="false" name="Run with mvn" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.kma.ImageTool.Main" />
+      <option name="VM_PARAMETERS" value="java -jar ImageTool-1.0-SNAPSHOT.one-jar.jar" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/target" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ImageTool" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="compile jar" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="jar:jar" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="compile assemble" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="assembly:single" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="jar" type="Remote" factoryName="Remote">
+      <log_file path="$PROJECT_DIR$/out/artifacts/ImageTool/log.txt" checked="true" skipped="true" show_all="false" alias="log" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <list size="10">
+      <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Run with mvn" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.compile jar" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.Unnamed" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.compile assemble" />
+      <item index="5" class="java.lang.String" itemvalue="Remote.jar" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.FileNamingConventionTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.FileNamingConventionTest.testBIONameShouldMatch" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.FileNamingConventionTest.testEMIThumbnailNameShouldMatch" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FileNamingConventionTest.testEMIThumbnailNameShouldMatch" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FileNamingConventionTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FileNamingConventionTest.testBIONameShouldMatch" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -558,7 +1113,7 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration">
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
     <configuration />
   </component>
   <component name="TaskManager">
@@ -571,22 +1126,49 @@
       <workItem from="1400851096660" duration="74000" />
       <workItem from="1404376134854" duration="4105000" />
       <workItem from="1404400497133" duration="1314000" />
+      <workItem from="1404421338952" duration="13175000" />
+      <workItem from="1404571162674" duration="21538000" />
+      <workItem from="1404721310666" duration="5194000" />
+      <workItem from="1404726764679" duration="4159000" />
+      <workItem from="1404825545512" duration="18000" />
+      <workItem from="1404854226704" duration="49000" />
+      <workItem from="1404854293091" duration="1827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5738000" />
+    <option name="totallyTimeSpent" value="51698000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="2560" height="1354" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="1111" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282981" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3282981" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997986" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -595,14 +1177,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33009708" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3397231" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24900715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24866879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -629,73 +1211,115 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/Model.java</url>
-          <line>227</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>149</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>184</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>474</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>504</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>483</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>513</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>486</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>516</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>489</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>519</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>508</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>536</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>523</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>519</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>548</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>517</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>545</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java</url>
-          <line>527</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>556</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/kma/ImageTool/Model/FileNamingConventionTest.java</url>
+          <line>234</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/HintTextField.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/HintTextField.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/kma/ImageTool/Model/FileNamingConventionTest.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/FileNamingConvention.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="72" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -703,234 +1327,426 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://MODULES/mdl-RefactoringKursova">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement>mdl-RefactoringKursova</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">mdl-RefactoringKursova</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="85.0" y="14.0" />
-          <SelectedNodes>
-            <node>mdl-RefactoringKursova</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="166.0" y="224.0">classes</node>
-            <node x="0.0" y="443.0">com</node>
-            <node x="151.0" y="297.0">Model</node>
-            <node x="290.0" y="370.0">DTO</node>
-            <node x="339.0" y="151.0">netscape</node>
-            <node x="119.0" y="78.0">Panels</node>
-            <node x="280.0" y="443.0">org</node>
-            <node x="0.0" y="297.0">oracle</node>
-            <node x="322.0" y="224.0">javafx</node>
-            <node x="0.0" y="151.0">META-INF</node>
-            <node x="31.75" y="0.0">ViewComponents</node>
-            <node x="141.0" y="443.0">sun</node>
-            <node x="0.0" y="370.0">Error</node>
-            <node x="272.0" y="0.0">DataStrategy</node>
-            <node x="0.0" y="78.0">View</node>
-            <node x="0.0" y="224.0">Factories</node>
-            <node x="146.0" y="370.0">Main</node>
-            <node x="170.0" y="151.0">Controller</node>
-            <node x="450.0" y="297.0">sunw</node>
-            <node x="301.0" y="297.0">javax</node>
-            <node x="433.0" y="370.0">java</node>
-            <node x="418.0" y="443.0">jdk</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="View" target="ViewComponents">
-              <point x="0.0" y="-14.0" />
-              <point x="49.5" y="53.0" />
-              <point x="71.5" y="53.0" />
-              <point x="-39.75" y="14.0" />
-            </edge>
-            <edge source="Panels" target="ViewComponents">
-              <point x="0.0" y="-14.0" />
-              <point x="173.0" y="53.0" />
-              <point x="151.0" y="53.0" />
-              <point x="39.75" y="14.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="550.0" y="313.0" />
-          <SelectedNodes>
-            <node>classes</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MODULES/mdl-RefactoringKursova">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement>mdl-RefactoringKursova</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">mdl-RefactoringKursova</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="85.0" y="14.0" />
-          <SelectedNodes>
-            <node>mdl-RefactoringKursova</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RefactoringKursova.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/XmlEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="649">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="166.0" y="224.0">classes</node>
-            <node x="0.0" y="443.0">com</node>
-            <node x="151.0" y="297.0">Model</node>
-            <node x="290.0" y="370.0">DTO</node>
-            <node x="339.0" y="151.0">netscape</node>
-            <node x="119.0" y="78.0">Panels</node>
-            <node x="280.0" y="443.0">org</node>
-            <node x="0.0" y="297.0">oracle</node>
-            <node x="322.0" y="224.0">javafx</node>
-            <node x="0.0" y="151.0">META-INF</node>
-            <node x="31.75" y="0.0">ViewComponents</node>
-            <node x="141.0" y="443.0">sun</node>
-            <node x="0.0" y="370.0">Error</node>
-            <node x="272.0" y="0.0">DataStrategy</node>
-            <node x="0.0" y="78.0">View</node>
-            <node x="0.0" y="224.0">Factories</node>
-            <node x="146.0" y="370.0">Main</node>
-            <node x="170.0" y="151.0">Controller</node>
-            <node x="450.0" y="297.0">sunw</node>
-            <node x="301.0" y="297.0">javax</node>
-            <node x="433.0" y="370.0">java</node>
-            <node x="418.0" y="443.0">jdk</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="View" target="ViewComponents">
-              <point x="0.0" y="-14.0" />
-              <point x="49.5" y="53.0" />
-              <point x="71.5" y="53.0" />
-              <point x="-39.75" y="14.0" />
-            </edge>
-            <edge source="Panels" target="ViewComponents">
-              <point x="0.0" y="-14.0" />
-              <point x="173.0" y="53.0" />
-              <point x="151.0" y="53.0" />
-              <point x="39.75" y="14.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="550.0" y="313.0" />
-          <SelectedNodes>
-            <node>classes</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/nio/file/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7319749" vertical-offset="673" max-vertical-offset="11715">
-          <caret line="102" column="84" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.04694836" vertical-offset="0" max-vertical-offset="639">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.52412647" vertical-offset="0" max-vertical-offset="735">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Error/InvalidImageFileNameException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Panels/HalfManual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="2655">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Panels/ExtendedPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HandleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="705">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HNameDpi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3286385" vertical-offset="0" max-vertical-offset="639">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Panels/Thumbnails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18779343" vertical-offset="0" max-vertical-offset="735">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2832551" vertical-offset="30179" max-vertical-offset="144300">
+          <caret line="2241" column="16" selection-start-line="2241" selection-start-column="16" selection-end-line="2241" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/ViewComponents/MetroTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42319748" vertical-offset="0" max-vertical-offset="900">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/SGMNamingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/GeneralNamingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/BJBNamingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/BIONamingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/BCDNamingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/impl/StrategyChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="645">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/strategy/INamingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/javax/swing/text/JTextComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="23735" max-vertical-offset="72735">
+          <caret line="1713" column="16" selection-start-line="1713" selection-start-column="16" selection-end-line="1713" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/javax/swing/JTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3630" max-vertical-offset="14505">
+          <caret line="242" column="16" selection-start-line="242" selection-start-column="16" selection-end-line="242" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/HintTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="1065">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/WorkingWithImage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5070" max-vertical-offset="9750">
-          <caret line="347" column="16" selection-start-line="346" selection-start-column="0" selection-end-line="347" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/util/logging/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17225" max-vertical-offset="24675">
+          <caret line="1145" column="16" selection-start-line="1145" selection-start-column="16" selection-end-line="1145" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/naming/FileNamingConvention.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="915">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Log/LoggerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.923077" vertical-offset="167" max-vertical-offset="780">
+          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15845071" vertical-offset="0" max-vertical-offset="568">
+          <caret line="6" column="77" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4457" max-vertical-offset="5025">
+          <caret line="327" column="23" selection-start-line="327" selection-start-column="23" selection-end-line="327" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/javax/swing/SwingWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2871" max-vertical-offset="11880">
+          <caret line="225" column="22" selection-start-line="225" selection-start-column="22" selection-end-line="225" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12006" max-vertical-offset="21465">
+          <caret line="878" column="0" selection-start-line="878" selection-start-column="0" selection-end-line="878" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="22671" max-vertical-offset="45105">
+          <caret line="1590" column="0" selection-start-line="1590" selection-start-column="0" selection-end-line="1590" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1125">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4214" max-vertical-offset="32280">
+          <caret line="357" column="0" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.kma:ImageTool:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.kma:ImageTool:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="-65.5" y="-14.5">com.jgoodies:jgoodies-forms:jar:1.6.0</node>
+            <node x="" y="">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="-30.5" y="-14.5">junit:junit:jar:4.11</node>
+            <node x="" y="">com.kma:ImageTool:1.0-SNAPSHOT</node>
+            <node x="-40.5" y="-14.5">org.im4java:im4java:jar:1.4.0</node>
+            <node x="-74.5" y="-14.5">com.jgoodies:jgoodies-forms:jar:1.6.0/com.jgoodies:jgoodies-common:jar:1.4.0</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.kma:ImageTool:1.0-SNAPSHOT" target="com.jgoodies:jgoodies-forms:jar:1.6.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.kma:ImageTool:1.0-SNAPSHOT" target="junit:junit:jar:4.11">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="junit:junit:jar:4.11" target="junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.jgoodies:jgoodies-forms:jar:1.6.0" target="com.jgoodies:jgoodies-forms:jar:1.6.0/com.jgoodies:jgoodies-common:jar:1.4.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.kma:ImageTool:1.0-SNAPSHOT" target="org.im4java:im4java:jar:1.4.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/kma/ImageTool/Model/FileNamingConventionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="5790">
+          <caret line="232" column="6" selection-start-line="232" selection-start-column="6" selection-end-line="232" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="975">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <marker date="1404728830000" expanded="true" signature="693:1266" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/WorkingWithImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="633" max-vertical-offset="10185">
+          <caret line="60" column="85" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RefactoringKursova.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="41" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <caret line="0" column="81" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3630" max-vertical-offset="6765">
+          <caret line="306" column="99" selection-start-line="306" selection-start-column="37" selection-end-line="306" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="300">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/View/MainContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ImageParameterFetch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state vertical-scroll-proportion="-5.9615383" vertical-offset="1660" max-vertical-offset="6405">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#4302#4303#0" expanded="true" />
+            <element signature="e#4341#4342#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/StringXml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4530">
+          <caret line="13" column="145" selection-start-line="13" selection-start-column="145" selection-end-line="13" selection-end-column="145" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/XmlKeys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="16" column="211" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DataStrategy/HoldDataStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="2" column="81" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/install_magic.bat">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/ImageParametrs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1208">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="6420">
+          <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+          <folding>
+            <element signature="e#2804#2805#0" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+            <element signature="e#2908#2909#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/XmlWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="12555">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#13253#13254#0" expanded="true" />
+            <element signature="e#13283#13284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/ParseXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3846154" vertical-offset="5223" max-vertical-offset="19545">
+          <caret line="372" column="61" selection-start-line="372" selection-start-column="61" selection-end-line="372" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Model/Model.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/DTO/HRenameConvention.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3975">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kma/ImageTool/Controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65543073" vertical-offset="585" max-vertical-offset="6540">
-          <caret line="93" column="57" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2259" max-vertical-offset="3855">
+          <caret line="173" column="23" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/View/MainArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="1455">
+          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5754" max-vertical-offset="6825">
+          <caret line="411" column="20" selection-start-line="411" selection-start-column="20" selection-end-line="411" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kma/ImageTool/Model/settings/WorkingDirectoryPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39800996" vertical-offset="0" max-vertical-offset="900">
+          <caret line="23" column="158" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -966,7 +1782,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>JsTestDriver Assertion Framework</last-edited>
+          <last-edited>grails-2.3.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -990,7 +1806,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>RefactoringKursova</last-edited>
+          <last-edited>ImageTool</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1014,7 +1830,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>im4java-1.4.0</last-edited>
+          <last-edited>Maven: com.jgoodies:jgoodies-common:1.4.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

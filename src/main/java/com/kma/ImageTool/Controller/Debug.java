@@ -1,5 +1,7 @@
 package com.kma.ImageTool.Controller;
 
+import com.kma.ImageTool.Log.LoggerUtils;
+
 public enum Debug {
 	GET;
 
@@ -7,7 +9,7 @@ public enum Debug {
 
 	public void log(String text) {
 		if (debugMode)
-			System.out.println("Debug: " + text);
+            LoggerUtils.getLogger().fine("Debug: " + text);
 	}
 
 	public void turnOn() {

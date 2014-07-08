@@ -9,4 +9,6 @@ public class XmlKeys {
     public static final String RENAME_IMAGE_FORMAT = "RENAME_IMAGE_FORMAT";
     public static final String RENAME_IMAGE_TH_FORMAT = "RENAME_IMAGE_TH_FORMAT";
     public static final String RENAME_IMAGE = "RENAME_IMAGE";
+    public static final String TEMPLATE_NAME = "TEMPLATE_NAME";
+
 }

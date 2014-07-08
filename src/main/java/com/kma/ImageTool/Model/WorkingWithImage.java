@@ -3,11 +3,14 @@ package com.kma.ImageTool.Model;
 import java.io.File;
 import java.io.IOException;
 import java.util.Set;
+import java.util.logging.Level;
 
 import com.kma.ImageTool.Error.InvalidImageFileNameException;
+import com.kma.ImageTool.Log.LoggerUtils;
 import com.kma.ImageTool.Model.naming.FileNamingConvention;
 import org.im4java.core.*;
 import org.im4java.process.ProcessStarter;
+
 
 public class WorkingWithImage {
 
@@ -26,7 +29,7 @@ public class WorkingWithImage {
 		pathToEditedFolder = "";
 	}
 
-	public boolean run(Set<String> images, String pathToLib, String pathToFolder) throws InvalidImageFileNameException {
+	public boolean process(Set<String> images, String pathToLib, String pathToFolder) throws InvalidImageFileNameException {
 		// set path to folders that we will use
 		this.pathToFolder = pathToFolder;
 		this.pathToIMLibrary = pathToLib;
@@ -49,11 +52,11 @@ public class WorkingWithImage {
 				ConvertCmd cmd = new ConvertCmd();
 				IMOperation op = new IMOperation();
 
-				String mrjVersion = System.getProperty("mrj.version");
-				boolean isMacOs = mrjVersion != null;
+                final String osName = System.getProperty("os.name");
+                boolean isMacOs = osName.equals("Mac OS X");
 				if (isMacOs) {
 					ProcessStarter.setGlobalSearchPath(pathToIMLibrary
-							+ "/bin:" + pathToIMLibrary + "/lib");
+                            + "/bin:" + pathToIMLibrary + "/lib");
 				} else {
 					String imPath = pathToIMLibrary;
 					cmd.setSearchPath(imPath);
@@ -118,7 +121,7 @@ public class WorkingWithImage {
                             .length());
                     original = original.substring(0,
                             original.indexOf(formatOfImage) - 1);
-                    System.out.println("Original image: " + original);
+                    LoggerUtils.getLogger().info("Original image: " + original);
 
 					if (imageParameters.shouldRenameFile()) {
                         if (imageParameters.getRenamingFormat() == null ||
@@ -145,8 +148,8 @@ public class WorkingWithImage {
                         nameOfThumbnailImage = original + "th";
                     }
                     // TODO mhontar: check regex renaming
-                    System.out.println("Name of image: " + nameOfImage);
-                    System.out.println("Name of th image: " + nameOfThumbnailImage);
+                    LoggerUtils.getLogger().info("Name of image: " + nameOfImage);
+                    LoggerUtils.getLogger().info("Name of th image: " + nameOfThumbnailImage);
 
 
                     if (format.equals("none")) {
@@ -173,11 +176,12 @@ public class WorkingWithImage {
 
 						}
 					} else {// default value
-						System.out.println("Why ELSE");
+						LoggerUtils.getLogger().info("Why ELSE");
 						resolution = 72;
 					}
 
 				} catch (InfoException e2) {
+                    LoggerUtils.getLogger().log(Level.SEVERE,"error: " + e2);
 					return false;
 				}
 
@@ -497,7 +501,7 @@ public class WorkingWithImage {
 
                         }
 					} else {
-                        System.out.println("path to output folder doesn't exist");
+                        LoggerUtils.getLogger().severe("path to output folder doesn't exist");
                         return false;
 					}
 
@@ -506,13 +510,13 @@ public class WorkingWithImage {
 							cmdForThumbnail.run(opForThumbnail);
 						}
 					} catch (IOException e) {
-						System.out.println("cmd.run(op) error: " + e);
+						LoggerUtils.getLogger().severe("cmd.run(op) error: " + e);
 						return false;
 					} catch (InterruptedException e) {
-						System.out.println("cmd.run(op) error: " + e);
+						LoggerUtils.getLogger().severe("cmd.run(op) error: " + e);
 						return false;
 					} catch (IM4JavaException e) {
-						System.out.println("cmd.run(op) error: " + e);
+						LoggerUtils.getLogger().severe("cmd.run(op) error: " + e);
 						return false;
 					}
 				}
@@ -529,7 +533,7 @@ public class WorkingWithImage {
                             + "." + format);
 
 				} else {
-
+                    LoggerUtils.getLogger().severe("checkForFolder() failed");
 					return false;
 				}
 				iterator++;
@@ -538,17 +542,18 @@ public class WorkingWithImage {
 				try {
 					cmd.run(op);
 				} catch (IOException e) {
-					System.out.println("cmd.run(op) error: " + e);
+                    LoggerUtils.getLogger().log(Level.SEVERE,"cmd.run(op) error: " + e);
 					return false;
 				} catch (InterruptedException e) {
+                    LoggerUtils.getLogger().log(Level.SEVERE,"error: " + e);
 					return false;
 				} catch (IM4JavaException e) {
-					System.out.println("cmd.run(op) error: " + e);
+                    LoggerUtils.getLogger().log(Level.SEVERE,"cmd.run(op) error: " + e);
 					return false;
 				}
 			}
 		} else {
-			System.out.println("No images found!");
+			LoggerUtils.getLogger().severe("No images found!");
 			return false;
 		}
 		this.pathToFolder = "";
@@ -609,12 +614,12 @@ public class WorkingWithImage {
 			if (successForNonDefaultDir) {
 				// set path to folder with edited images
                 pathToEditedFolder = outputDir.getAbsolutePath();
-				System.out.println("Create folder: " + pathToEditedFolder);
+				LoggerUtils.getLogger().info("Create folder: " + pathToEditedFolder);
                 // create thumbnails folder
                 createThumbnailsDirectory(outputDir);
 				return;
 			}else {
-                System.out.println("Couldn't create output folder: " + outputDir.getAbsolutePath());
+                LoggerUtils.getLogger().severe("Couldn't create output folder: " + outputDir.getAbsolutePath());
             }
 		}
 	}
@@ -622,15 +627,15 @@ public class WorkingWithImage {
     private void createThumbnailsDirectory(File outputDir) {
         final File thumbnailsFile = new File(outputDir.getAbsolutePath() + File.separator + THUMBNAILS_FOLDER);
         if(thumbnailsFile.mkdir()){
-            System.out.println("Create folder: " + thumbnailsFile.getAbsolutePath());
+            LoggerUtils.getLogger().info("Create folder: " + thumbnailsFile.getAbsolutePath());
         }else {
-            System.out.println("Couldn't create folder for thumbnails: " + thumbnailsFile.getAbsolutePath());
+            LoggerUtils.getLogger().severe("Couldn't create folder for thumbnails: " + thumbnailsFile.getAbsolutePath());
         }
     }
 
     public boolean checkForFolder() {
 		if (new File(pathToEditedFolder).exists()) {
-			System.out.println("TRUE checkForFolder");
+			LoggerUtils.getLogger().fine("TRUE checkForFolder");
 			return true;
 		}
 		return false;

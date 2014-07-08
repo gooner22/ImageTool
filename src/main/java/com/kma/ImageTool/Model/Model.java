@@ -4,10 +4,12 @@ import com.kma.ImageTool.DTO.ImageParametrs;
 import com.kma.ImageTool.DataStrategy.StringXml;
 import com.kma.ImageTool.Error.InvalidImageFileNameException;
 import com.kma.ImageTool.Error.NotExistingXMLError;
+import com.kma.ImageTool.Log.LoggerUtils;
 
 import java.io.*;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
 
 /**
  * Singletone model to handle all work with data
@@ -33,8 +35,7 @@ public enum Model {
 			Runtime.getRuntime().exec("cmd /c start install_magic.bat");
             return true;
 		} catch (IOException e) {
-			System.out.println("Can't run your bat");
-			e.printStackTrace();
+            LoggerUtils.getLogger().log(Level.SEVERE, "Can't run your bat", e);
 		}
         return false;
 	}
@@ -72,8 +73,7 @@ public enum Model {
 				writer.close();
 
 			} catch (IOException e) {
-
-				e.printStackTrace();
+                LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
 				return false;
 			}
 		} else {
@@ -107,15 +107,14 @@ public enum Model {
 			String path = pathToFolderWorkingWith + File.separator + "imageSettings.xml";
 			File f = new File(path);
 			if (f.exists()) {
-				System.out.println("delete file");
+                LoggerUtils.getLogger().info("delete file: " + path);
 				f.delete();
 			}
 			try {
-				System.out.println("create file");
+                LoggerUtils.getLogger().info("create file: " + path);
 				f.createNewFile();
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+                LoggerUtils.getLogger().log(Level.SEVERE, "error",e1);
 			}
 			BufferedWriter writer;
 			try {
@@ -126,8 +125,7 @@ public enum Model {
 				writer.close();
 
 			} catch (IOException e) {
-
-				e.printStackTrace();
+                LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
 				return false;
 			}
 		} else {
@@ -208,13 +206,13 @@ public enum Model {
 
 
 		} catch (IOException e) {
-			e.printStackTrace();
+            LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
 		} finally {
 			try {
 				if (br != null)
 					br.close();
 			} catch (IOException ex) {
-				ex.printStackTrace();
+                LoggerUtils.getLogger().log(Level.SEVERE, "error", ex);
 			}
 		}
 
@@ -226,13 +224,9 @@ public enum Model {
 	 */
 	public boolean doRunEditing() throws InvalidImageFileNameException {
 		try {
-			WorkingWithImage wwi = new WorkingWithImage(
-					getImageFetch(getXmlFile()));
-			return wwi.run(getPhotos(), getPathToLibrary(),
-					getPathToFolderWorkingWith());
-		} catch (NotExistingXMLError e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+            return new WorkingWithImage(getImageFetch(getXmlFile())).process(getPhotos(), getPathToLibrary(), getPathToFolderWorkingWith());
+        } catch (Exception e) {
+            LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
 		}
 		return false;
 

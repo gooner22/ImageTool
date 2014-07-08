@@ -9,8 +9,7 @@ package com.kma.ImageTool.DTO;
  */
 public class ImageParametrs {
 
-    @Deprecated
-	String newName = "";
+	String templateName = "";
     String renamingFormat = "";
     String thumbnailRenamingFormat = "";
     String format = "";
@@ -106,17 +105,15 @@ public class ImageParametrs {
 		this.resolutionDPI = resolutionDPI;
 	}
 
-    @Deprecated
-	public String getNewName() {
-		return newName;
-	}
+    public String getTemplateName() {
+        return templateName;
+    }
 
-    @Deprecated
-	public void setNewName(String newName) {
-		this.newName = newName;
-	}
+    public void setTemplateName(String templateName) {
+        this.templateName = templateName;
+    }
 
-	public String getFormat() {
+    public String getFormat() {
 		return format;
 	}
 

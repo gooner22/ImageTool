@@ -1,6 +1,7 @@
 package com.kma.ImageTool.Model.naming;
 
 import com.kma.ImageTool.Error.InvalidImageFileNameException;
+import com.kma.ImageTool.Log.LoggerUtils;
 import com.kma.ImageTool.Model.naming.strategy.impl.StrategyChooser;
 
 import java.util.Arrays;
@@ -36,7 +37,7 @@ public class FileNamingConvention {
         try {
             return strategyChooser.getNumberOfFile(getMatcher(sourceFileName));
         } catch (InvalidImageFileNameException e) {
-            System.out.println("Can not find strategy for file named: " + sourceFileName);
+            LoggerUtils.getLogger().severe("Can not find strategy for file named: " + sourceFileName);
             return -1;
         }
     }

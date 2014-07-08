@@ -14,8 +14,7 @@ public class ImageParameterFetch {
 	@SuppressWarnings("rawtypes")
 	private List<ArrayList> setOfSetsOfOldValues = new ArrayList<ArrayList>();
 
-    @Deprecated
-	private String newName;
+	private String templateName;
 	private String renamingFormat = "";
 	private String renamingFormatThumbnail = "";
 	private String format;
@@ -69,7 +68,7 @@ public class ImageParameterFetch {
     private boolean shouldRenameFile = false;
 
 	public ImageParameterFetch() {
-		this.newName = new String("");
+		this.templateName = new String("");
 		this.format = new String("");
 		this.changeColorModel = new String("");
 
@@ -81,7 +80,7 @@ public class ImageParameterFetch {
 	}
 
 	private void addValuesToArray(ArrayList<Object> array) {
-		array.add(this.newName);
+		array.add(this.templateName);
 		array.add(this.format);
 		array.add(this.resizePercentage);
 		array.add(this.resolutionDPI);
@@ -124,14 +123,12 @@ public class ImageParameterFetch {
 		setOfSetsOfOldValues.add(oldValues);
 	}
 
-    @Deprecated
-	public String getNewName() {
-		return newName;
+	public String getTemplateName() {
+		return templateName;
 	}
 
-    @Deprecated
-	public void setNewName(String newName) {
-		this.newName = newName;
+	public void setTemplateName(String templateName) {
+		this.templateName = templateName;
 	}
 
 	public String getFormat() {
@@ -517,7 +514,7 @@ public class ImageParameterFetch {
     @Override
 	public String toString() {
 		return "ImageParameterFetch [setOfSetsOfOldValues="
-				+ setOfSetsOfOldValues + ", newName=" + newName + ", format="
+				+ setOfSetsOfOldValues + ", templateName=" + templateName + ", format="
 				+ format + ", changeColorModel=" + changeColorModel
 				+ ", typeOfLessWidthToCheck=" + typeOfLessWidthToCheck
 				+ ", typeOfLessHeightToCheck=" + typeOfLessHeightToCheck

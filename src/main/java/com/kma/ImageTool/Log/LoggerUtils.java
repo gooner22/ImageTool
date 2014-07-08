@@ -2,6 +2,7 @@ package com.kma.ImageTool.Log;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
@@ -26,13 +27,15 @@ public class LoggerUtils {
                 SimpleFormatter formatter = new SimpleFormatter();
                 fh.setFormatter(formatter);
 
+                logger.setLevel(Level.FINEST);
+
                 // the following statement is used to log any messages
                 logger.info("Logger started");
 
             } catch (SecurityException e) {
-                e.printStackTrace();
+                LoggerUtils.getLogger().log(Level.SEVERE, "error",e);
             } catch (IOException e) {
-                e.printStackTrace();
+                LoggerUtils.getLogger().log(Level.SEVERE, "error",e);
             }
 
             mainLogger = logger;
