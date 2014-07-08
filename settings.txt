@@ -1,1 +1,1 @@
-C:\Program Files\ImageMagick-6.8.7-Q16
+/imagelibs/imagemagick/6.8.9-1

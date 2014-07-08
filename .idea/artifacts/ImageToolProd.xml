@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="ImageToolProd">
+    <output-path>$PROJECT_DIR$/out/artifacts/ImageToolProd</output-path>
+    <root id="root">
+      <element id="archive" name="ImageTool.jar">
+        <element id="module-output" name="RefactoringKursova" />
+      </element>
+      <element id="library" level="project" name="im4java-1.4.0" />
+    </root>
+  </artifact>
+</component>
