@@ -3,6 +3,7 @@ package com.kma.ImageTool.Model.settings;
 import com.kma.ImageTool.Log.LoggerUtils;
 
 import java.io.*;
+import java.net.URLDecoder;
 import java.util.logging.Level;
 
 /**
@@ -10,8 +11,21 @@ import java.util.logging.Level;
  * Created by mhontar on 09.07.14.
  */
 public class TmpFileUtils {
-    // TODO: replace with relative path
-    public static final String TMP_WORKING_DIR_PATH = "/tmp";
+    public static final String TMP_WORKING_DIR_PATH;
+
+    static{
+        String pathToProject = "";
+        try {
+            pathToProject = URLDecoder.decode(new File("").getAbsolutePath(), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        TMP_WORKING_DIR_PATH = pathToProject + File.separator + "tmp";
+        File pathDirectory = new File(TMP_WORKING_DIR_PATH);
+        if(!pathDirectory.exists()){
+            pathDirectory.mkdirs();
+        }
+    }
 
     public static void serializeObjectAtPath(String path, Serializable obj) {
         try

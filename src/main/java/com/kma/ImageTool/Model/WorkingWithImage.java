@@ -60,7 +60,8 @@ public class WorkingWithImage {
                     ProcessStarter.setGlobalSearchPath(pathToIMLibrary
 							+ "/bin:" + pathToIMLibrary + "/lib");
 				} else {
-					String imPath = pathToIMLibrary + "/bin;" + pathToIMLibrary + "/lib";
+					String imPath = pathToIMLibrary;
+                    ProcessStarter.setGlobalSearchPath(imPath);
 					cmd.setSearchPath(imPath);
 				}
 				op.addImage(imagePath);
@@ -80,7 +81,7 @@ public class WorkingWithImage {
 						ProcessStarter.setGlobalSearchPath(pathToIMLibrary
 								+ "/bin:" + pathToIMLibrary + "/lib");
 					} else {
-						String imPath = pathToIMLibrary + "/bin;" + pathToIMLibrary + "/lib";
+						String imPath = pathToIMLibrary;
 
 						if (cmdForThumbnail != null && opForThumbnail != null)
 							cmdForThumbnail.setSearchPath(imPath);
@@ -477,11 +478,11 @@ public class WorkingWithImage {
 					// Creating thumbnails
 					if (imageParameters.getThumbnailWidth() > 0
 							&& imageParameters.getThumbnailWidth() > 0
-							&& imageParameters.getThumbnailHeight() <= 256
-							&& imageParameters.getThumbnailWidth() <= 256) {
+							&& imageParameters.getThumbnailHeight() > 0
+							&& imageParameters.getThumbnailHeight() <= 256) {
 						opForThumbnail.thumbnail(
-								imageParameters.getThumbnailHeight(),
-								imageParameters.getThumbnailHeight(), '!');
+								imageParameters.getThumbnailWidth(),
+								imageParameters.getThumbnailWidth(), '!');
 					} else if (imageParameters.getThumbnailWidth() > 0
 							&& imageParameters.getThumbnailWidth() <= 256) {
 						opForThumbnail.thumbnail(

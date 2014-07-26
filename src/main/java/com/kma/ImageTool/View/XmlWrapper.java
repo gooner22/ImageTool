@@ -75,9 +75,9 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		lblDPI.setBounds(180, 10, 35, 16);
 		add(lblDPI);
 
-		JSeparator separator = new JSeparator();
+		/*JSeparator separator = new JSeparator();
 		separator.setBounds(0, 29, 628, 2);
-		add(separator);
+		add(separator);*/
 
 		JLabel lblResize = new JLabel("Resize");
 		Decorator.decorateNormal(lblResize);
@@ -90,7 +90,7 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		add(rdbtnManual);
 
 		rdbtnExtended = ComponentFactory.GET.getRadioBtn("extended");
-		rdbtnExtended.setBounds(138, 30, 100, 23);
+		rdbtnExtended.setBounds(168, 30, 100, 23);
 		add(rdbtnExtended);
 
 		ButtonGroup m = new ButtonGroup();
@@ -106,9 +106,9 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 		pnlManual.setLocation(0, 60);
 		add(pnlManual);
 
-		JSeparator separator_1 = new JSeparator();
+		/*JSeparator separator_1 = new JSeparator();
 		separator_1.setBounds(0, 320, 628, 2);
-		add(separator_1);
+		add(separator_1);*/
 
 		JLabel lblColorMode = new JLabel("Color mode");
 		Decorator.decorateNormal(lblColorMode);
@@ -553,13 +553,13 @@ public class XmlWrapper extends MetroPanel implements ActionListener,
 			Integer w = (Integer) imageWorkingWith.getThumbnailWidth();
 			pnlThumbnail.getTxtWidth().setText(w.toString());
 		}
-		if (imageWorkingWith.getThumbnailHeight() > 0
+		/*if (imageWorkingWith.getThumbnailHeight() > 0
 				&& imageWorkingWith.getThumbnailHeight() <= 256) {
 			chckbThumbnail.setSelected(true);
 			pnlThumbnail.setVisible(true);
 			Integer h = (Integer) imageWorkingWith.getThumbnailHeight();
 			pnlThumbnail.getTxtHeight().setText(h.toString());
-		}
+		}*/
 		if (imageWorkingWith.getSizeHeight() > 0) {
 			Integer sh = (Integer) imageWorkingWith.getSizeHeight();
 			pnlManual.getTxtHeight().setText(sh.toString());

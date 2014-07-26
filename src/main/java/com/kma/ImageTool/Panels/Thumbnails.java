@@ -22,14 +22,14 @@ public class Thumbnails extends MetroPanel {
 		txtWidth.setLocation(39, 4);
 		add(txtWidth);
 
-		JLabel lblHeight = new JLabel("height");
+		/*JLabel lblHeight = new JLabel("height");
 		Decorator.decorateInfo(lblHeight);
 		lblHeight.setBounds(135, 7, 46, 14);
 		add(lblHeight);
 
 		txtHeight = ComponentFactory.GET.getMetroTextSmall();
 		txtHeight.setLocation(170, 4);
-		add(txtHeight);
+		add(txtHeight);*/
 
 	}
 

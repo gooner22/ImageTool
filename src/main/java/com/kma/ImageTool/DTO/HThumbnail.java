@@ -13,7 +13,7 @@ public class HThumbnail implements Handler {
 	@Override
 	public void execute(XmlWrapper wr, ImageParametrs ip) {
 		if (wr.getChckbThumbnail().isSelected()) {
-			ip.setThumbnailHeight(wr.getPnlThumbnail().getTxtHeight().getText());
+			//ip.setThumbnailHeight(wr.getPnlThumbnail().getTxtHeight().getText());
 			ip.setThumbnailWidth(wr.getPnlThumbnail().getTxtWidth().getText());
 		}
 

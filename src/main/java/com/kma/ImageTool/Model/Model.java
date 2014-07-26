@@ -192,18 +192,18 @@ public enum Model {
 	 */
 	public String getPathToLibrary() {
 
-		BufferedReader br = null;
+		//BufferedReader br = null;
 
 		try {
 
-			String sCurrentLine;
+			/*String sCurrentLine;
 
 			br = new BufferedReader(new FileReader("settings.txt"));
 
 			// only one line must be
 			while ((sCurrentLine = br.readLine()) != null) {
 				break;
-			}
+			}*/
 
 
 			//pathToImageMagic = sCurrentLine;
@@ -211,19 +211,20 @@ public enum Model {
             // relative path to sewn lib
             //pathToImageMagic = URLDecoder.decode(new File("").getAbsolutePath(), "UTF-8") + sCurrentLine;
 
-            pathToImageMagic = URLDecoder.decode(new File("").getAbsolutePath(), "UTF-8") + "/imagelibs/imagemagick/6.8.9-1";
+            pathToImageMagic = URLDecoder.decode(new File("").getAbsolutePath(), "UTF-8") + File.separator + "imagelibs"
+                    + File.separator + "imagemagick" + File.separator + "6.8.9-1";
 
 
 		} catch (IOException e) {
             LoggerUtils.getLogger().log(Level.SEVERE, "error", e);
-		} finally {
+		} /*finally {
 			try {
 				if (br != null)
 					br.close();
 			} catch (IOException ex) {
                 LoggerUtils.getLogger().log(Level.SEVERE, "error", ex);
 			}
-		}
+		}*/
 
 		return pathToImageMagic;
 	}

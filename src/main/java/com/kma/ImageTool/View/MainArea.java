@@ -61,7 +61,7 @@ public class MainArea extends MetroPanel {
 
 		lblInfo = new JLabel();
 		Decorator.decorateNormal(lblInfo);
-		lblInfo.setBounds(127, templateName.getY() + templateName.getHeight() + 50, 320, 21);
+		lblInfo.setBounds(127, templateName.getY() + templateName.getHeight() + 60, 320, 21);
 
         progressBar = ComponentFactory.GET.getProgressBar();
 		progressBar.setLocation(128, templateName.getY() + templateName.getHeight() + 30);

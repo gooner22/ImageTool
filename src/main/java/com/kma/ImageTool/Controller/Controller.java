@@ -274,7 +274,8 @@ public class Controller {
 	 */
 	private boolean checkThumbnail() {
 
-		if (wrapper.getChckbThumbnail().isSelected() == true) {
+        // there is no height panel now
+		/*if (wrapper.getChckbThumbnail().isSelected() == true) {
 
 			if (wrapper.getPnlThumbnail().getTxtHeight().getText().equals("")
 					|| wrapper.getPnlThumbnail().getTxtWidth().getText()
@@ -284,7 +285,7 @@ public class Controller {
 				return true;
 			}
 		}
-
+*/
 		return true;
 	}
 

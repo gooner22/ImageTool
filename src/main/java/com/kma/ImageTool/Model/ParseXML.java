@@ -1116,8 +1116,13 @@ public class ParseXML {
 								}
 							}
 						} else {
-							imageWorkingWith.setThumbnailWidth(0);
-							imageWorkingWith.setThumbnailHeight(0);
+                            if(thumbnail != null && thumbnail.length() > 0){
+                                imageWorkingWith.setThumbnailWidth(Integer.valueOf(thumbnail));
+                            }
+                            else{
+                                imageWorkingWith.setThumbnailWidth(0);
+                                imageWorkingWith.setThumbnailHeight(0);
+                            }
 						}
 						createThumbnail = false;
 					}
